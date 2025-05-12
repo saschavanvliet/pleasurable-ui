@@ -5,9 +5,9 @@
 Repo klaarzetten, taken plannen en afspraken maken met je team.
 
 ### Aanpak
-Deze sprint werk je in een team aan de website voor de opdrachtgever. Jullie gaan het beste werk en ideeën samenbrengen in 1 complete website.
-
-
+Deze sprint werk je in een team aan de website voor de opdrachtgever. 
+Jullie gaan het beste werk en ideeën samenbrengen in 1 complete website.
+Deze sprint ga je dus weer "Kill Your Darlings' toepassen. Huilen ... Met je team bouw je de website deze week from scratch op vanaf de _functional_ en _reliable_ laag.
 
 Jullie gaan op 1 repository werken met de *Feature Branch Workflow*; issue oppakken, feature branch maken, pull request maken, code laten reviewen, mergen...
 
@@ -40,7 +40,7 @@ Geef op het whiteboard aan welke onderdelen wel en welke nog geen design hebben.
 
 ## Taken plannen en MoSCoW bepalen
 
-Omdat je met een team gaat samenwerken, is het verstandig om een nieuw project board aan te maken. Dat moet één van de teamleden doen, die de anderen toegang geeft. Laat één teamlid deze leertaak Forken om het project board en issues te kunnen koppelen. Dit wordt jullie gezamenlijke *repository*.
+Omdat je met een team gaat samenwerken gaan jullie een nieuw project board aanmaken. Dat moet één van de teamleden doen, die de anderen toegang geeft. Laat één teamlid deze leertaak Forken om het project board en issues te kunnen koppelen. Dit wordt jullie gezamenlijke *repository*.
 
 ![](ghprojects-example-roadmap.webp)
 *GitHub projects geeft een duidelijk overzicht van taken en planning.*
@@ -48,7 +48,8 @@ Omdat je met een team gaat samenwerken, is het verstandig om een nieuw project b
 Maak samen issues van alle taken waar jullie mee aan de slag gaan deze sprint. Schrijf voor een issue een (korte) uitleg wat het issue inhoudt en mogelijke knelpunten. Het is de bedoeling dat je dit zo schrijft dat teamleden ook begrijpen wat je bedoelt...
 
 ### MoSCoW
-Kunnen jullie al bedenken wat jullie elke week af willen hebben om woensdag 28 mei een mooie website te presenteren? Wat is daarvoor nodig? Hier kan je de _MoSCoW methode_ voor gebruiken.
+Kunnen jullie al bedenken wat jullie elke week af willen hebben? De eerste week wil je minimaal de _functional_ en _reliable_ laag hebben staan, met de routes en data, in de huisstijl. Vanaf de tweede week kunnen we ons dan meer richten op de _pleasurable_ laag.
+Wat is daarvoor nodig? Hier kan je de _MoSCoW methode_ voor gebruiken.
 
 MoSCoW is een afkorting van *Must haves*, *Should haves*, *Could haves* en *Won't haves (this time)*. Dit is een methode waarmee je taken kan _prioriteren_. Wat moet er sowieso zijn voor de oplevering? Welke onderdelen zijn belangrijk, maar niet noodzakelijk voor de oplevering? Welke onderdelen of pagina's zijn niet per se nodig en doen jullie alleen als er genoeg tijd is? En welke onderdelen zijn nu niet nodig?
 
