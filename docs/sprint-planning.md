@@ -7,7 +7,7 @@ Repo klaarzetten, taken plannen en afspraken maken met je team.
 ### Aanpak
 Deze sprint werk je in een team aan de website voor de opdrachtgever. 
 Jullie gaan het beste werk en ideeën samenbrengen in 1 complete website.
-Deze sprint ga je dus weer "Kill Your Darlings' toepassen. Huilen ... Met je team bouw je de website deze week from scratch op vanaf de _functional_ en _reliable_ laag.
+Deze sprint ga je dus weer “Kill Your Darlings” toepassen. Huilen ... Met je team bouw je de website deze week from scratch op vanaf de _functional_ en _reliable_ laag.
 
 Jullie gaan op 1 repository werken met de *Feature Branch Workflow*; issue oppakken, feature branch maken, pull request maken, code laten reviewen, mergen...
 
@@ -40,7 +40,7 @@ Geef op het whiteboard aan welke onderdelen wel en welke nog geen design hebben.
 
 ## Taken plannen en MoSCoW bepalen
 
-Omdat je met een team gaat samenwerken gaan jullie een nieuw project board aanmaken. Dat moet één van de teamleden doen, die de anderen toegang geeft. Laat één teamlid deze leertaak Forken om het project board en issues te kunnen koppelen. Dit wordt jullie gezamenlijke *repository*.
+Omdat je met een team gaat samenwerken, gaan jullie een nieuw project board aanmaken. Dat moet één van de teamleden doen, die de anderen toegang geeft. Laat één teamlid deze leertaak Forken om het project board en issues te kunnen koppelen. Dit wordt jullie gezamenlijke *repository*.
 
 ![](ghprojects-example-roadmap.webp)
 *GitHub projects geeft een duidelijk overzicht van taken en planning.*
