@@ -1,4 +1,19 @@
-{% render 'partials/head.liquid', title: 'Stekjes' %}
+{% render 'partials/head.liquid', title: 'Contact' %}
+
+{% render 'partials/nav.liquid' %}
+
+<h1>Alle stekjes</h1>
+
+<pre>
+  {{ stekjes | json }}
+</pre>
+
+<ul>
+  {% for stekje in stekjes %}
+    <li>{{ stekje.naam }}</li>
+  {% endfor %}
+</ul>
+
 
 
 

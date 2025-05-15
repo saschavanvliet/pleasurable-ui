@@ -39,120 +39,152 @@
 
 /* ========== HEADER STYLING ========== */
 
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-  }
-  
-  header {
-      background-color: #006400;
-      color: white;
-  }
-  
-  .navbar {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 1rem 2rem;
-      flex-wrap: wrap;
-  }
-  
-  .logo-container {
-      display: flex;
-      align-items: center;
-  }
-  
-  .logo {
-      width: 50px;
-      height: auto;
-      margin-left: 10px;
-  }
-  
-  h1 {
-      font-size: 1.5rem;
-  }
-  
+  /* ========== BASISSTIJLEN ========== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --footer-bg: #3e593c;        /* donkergroen */
+  --text-light: #e9dcbe;       /* beige tekstkleur */
+  --hover-light: #f3ead1;      /* lichtere beige hoverkleur */
+  --dropdown-bg: #486b4c;      /* iets lichtere groen voor dropdown */
+  --font-primary: 'Poppins', sans-serif;
+}
+
+/* ========== HEADER ========== */
+header {
+  background-color: var(--footer-bg);
+  color: var(--text-light);
+  font-family: var(--font-primary);
+}
+
+/* ========== NAVBAR ========== */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  flex-wrap: wrap;
+}
+
+/* ========== LOGO EN TITEL ========== */
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  width: 36px; 
+  height: auto;
+  margin-left: 10px;
+}
+
+h1 {
+  font-size: 1.5rem;
+  color: var(--text-light);
+  font-family: var(--font-primary);
+}
+
+/* ========== HAMBURGER MENU ========== */
+.menu-toggle {
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  color: var(--text-light);
+  cursor: pointer;
+  display: block;
+  font-family: var(--font-primary);
+}
+
+@media (min-width: 769px) {
   .menu-toggle {
-      font-size: 1.5rem;
-      background: none;
-      border: none;
-      color: white;
-      cursor: pointer;
-      display: block;
-  
-      @media (min-width: 769px) {
-          display: none;
-      }
+    display: none;
   }
-  
+}
+
+/* ========== NAV LINKS ========== */
+.nav-links {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--footer-bg);
+  position: absolute;
+  top: 60px;
+  right: 0;
+  width: 100%;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-in-out;
+  font-family: var(--font-primary);
+}
+
+@media (min-width: 769px) {
   .nav-links {
-      list-style: none;
-      display: flex;
-      flex-direction: column;
-      background-color: var(--card-color-green);
-      position: absolute;
-      top: 60px;
-      right: 0;
-      width: 100%;
-      max-height: 0;
-      overflow: hidden;
-      transition: max-height 0.3s ease-in-out;
-  
-      @media (min-width: 769px) {
-          flex-direction: row;
-          position: static;
-          background-color: transparent;
-          width: auto;
-          max-height: none;
-          gap: 1.5rem;
-      }
+    flex-direction: row;
+    position: static;
+    background-color: transparent;
+    width: auto;
+    max-height: none;
+    gap: 1.5rem;
   }
-  
-  .nav-links.open {
-      max-height: 300px;
-  }
-  
+}
+
+.nav-links.open {
+  max-height: 300px;
+}
+
+.nav-links li {
+  text-align: center;
+  padding: 0.5rem 0;
+}
+
+@media (min-width: 769px) {
   .nav-links li {
-      text-align: center;
-      padding: 0.5rem 0;
-  
-      @media (min-width: 769px) {
-          text-align: left;
-          padding: 0;
-      }
+    text-align: left;
+    padding: 0;
   }
-  
-  .nav-links a {
-      color: white;
-      text-decoration: none;
-      font-size: 1.1rem;
-      padding: 0.5rem;
-  }
-  
-  .nav-links details summary {
-      cursor: pointer;
-  }
-  
+}
+
+.nav-links a {
+  color: var(--text-light);
+  text-decoration: none;
+  font-size: 1.1rem;
+  padding: 0.5rem;
+  font-family: var(--font-primary);
+}
+
+.nav-links a:hover,
+.nav-links details summary:hover {
+  color: var(--hover-light);
+}
+
+/* ========== DROPDOWN MENU ========== */
+.nav-links details summary {
+  cursor: pointer;
+  color: var(--text-light);
+  font-family: var(--font-primary);
+}
+
+.nav-links details ul {
+  background-color: var(--dropdown-bg);
+  padding: 0.5rem;
+  position: static;
+  display: none;
+}
+
+@media (min-width: 769px) {
   .nav-links details ul {
-      background-color: #228B22;
-      padding: 0.5rem;
-      position: static;
-      display: none;
-      
-      @media (min-width: 769px) {
-          position: absolute;
-      }
+    position: absolute;
   }
-  
-  .nav-links details[open] ul {
-      display: block;
-  }
-  
-  .nav-links li:hover a, 
-  .nav-links details summary:hover {
-      color: #ADD8E6;
-  }
+}
+
+.nav-links details[open] ul {
+  display: block;
+}
+
 /* ========== FOOTER STYLING ========== */
 
 .footer {
@@ -225,3 +257,5 @@
     justify-content: space-between;
   }
 }
+
+
