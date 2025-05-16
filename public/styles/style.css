@@ -103,7 +103,7 @@
 
 /* ========== RESPONSIVE ========== */
 
-@media (min-width: 640px) {
+@media (min-width: 769px) {
   .footer-content {
     flex-direction: row;
     justify-content: space-between;
