@@ -1,2 +1,18 @@
 {% render 'partials/head.liquid' %}
+
+<main class="container">
+    <section class="workshop-container">
+        {% for workshop in workshops %}
+            <article class="workshop">
+                {{ workshop.naam }} 
+                {{ workshop.omschrijving }}
+                {{ workshop.kosten }} 
+                {{ workshop.locatie }}
+                {{ workshop.datum }}
+                <img src="https://fdnd-agency.directus.app/assets/{{ workshop.foto }}">
+            </article>
+        {% endfor %}
+    </section>
+</main>
+
 {% render 'partials/foot.liquid' %}

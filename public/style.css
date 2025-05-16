@@ -112,3 +112,11 @@ h1 {
 .nav-links details summary:hover {
     color: #ADD8E6;
 }
+
+.workshop-container {
+    padding: 2rem;
+}
+
+.workshop {
+    margin-top: 2rem;
+}
