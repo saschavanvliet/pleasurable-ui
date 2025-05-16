@@ -26,16 +26,34 @@ app.set('views', './views')
 const workshopsResponse = await fetch('https://fdnd-agency.directus.app/items/bib_workshops')
 const workshopsResponseJSON = await workshopsResponse.json()
 
+// Home
 app.get('/', async function (request, response) {
   response.render('index.liquid', {
    workshops: workshopsResponseJSON.data
   })
  })
 
+const stekjesResponse = await fetch('https://fdnd-agency.directus.app/items/bib_stekjes')
+const stekjesResponseJSON = await stekjesResponse.json()
+
+const plaatjesResponse = await fetch('https://fdnd-agency.directus.app/items/bib_afbeeldingen?filter={%20%22type%22:%20{%20%22_eq%22:%20%22stekjes%22%20}}')
+const plaatjesResponseJSON = await plaatjesResponse.json()
+
 // Stekjes
 app.get('/stekjes', async function (request, response) {
-  response.render('stekjes.liquid')
-})
+  response.render('stekjes.liquid', {
+   stekjes: stekjesResponseJSON.data,
+   plaatjes: plaatjesResponseJSON.data
+   })
+  })
+  
+  app.get('/stekjes/:id', async function (request, response) {
+    const stekjeId = request.params.id;
+    const stekjeResponse = await fetch(`https://fdnd-agency.directus.app/items/bib_stekjes/${stekjeId}`);
+    const stekjeData = await stekjeResponse.json();
+    
+    response.render('stekjes.liquid', { stekje: stekjeData.data });
+    });
 
 // Zaden
 app.get('/zaden', async function (request, response) {

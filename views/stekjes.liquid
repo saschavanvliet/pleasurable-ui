@@ -1,5 +1,15 @@
 {% render 'partials/head.liquid', title: 'Stekjes' %}
 
+{% for stekje in stekjes %}
+<section class="stekje-detail">
+    <article class="stekje">
+        <h1>{{ stekje.naam }}</h1>
+        <p>{{ stekje.beschrijving }}</p>
+        <p>{{ stekje.giftig }}</p>
+        <img src="https://fdnd-agency.directus.app/assets/{{ stekje.foto }}" alt="{{ stekje.naam }}" width="400">
+    </article>
+</section>
+{% endfor %}
 
 
 {% render 'partials/foot.liquid' %}
