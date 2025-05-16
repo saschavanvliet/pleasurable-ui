@@ -37,7 +37,7 @@
         --radius:1rem;
     }
 
-/* ========== HEADER STYLING ========== */
+/* ========== STANDAARD NAV STYLING ========== */
 
     * {
       margin: 0;
@@ -45,12 +45,12 @@
       box-sizing: border-box;
   }
   
-  header {
-      background-color: #006400;
+  nav {
       color: white;
   }
   
   .navbar {
+      background-color: var(--main-color-green);
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -152,8 +152,9 @@
   .nav-links li:hover a, 
   .nav-links details summary:hover {
       color: #ADD8E6;
+
   }
-/* ========== FOOTER STYLING ========== */
+/* ========== STANDAARD FOOTER STYLING ========== */
 
 .footer {
   background-color: var(--card-color-green);
@@ -217,6 +218,162 @@
   text-decoration: underline;
 }
 
+/* ========== HOMEPAGINA STYLING ========== */
+
+.intro {
+  font-family: 'Poppins', sans-serif;
+  background-image: url('../assets/home-background.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 750px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  h1 { 
+    color: var(--text-color-white);
+      font-size: 6rem;
+      font-weight: var(--font-weight-extra-bold);
+      text-align: center;
+      justify-content: center;
+      max-width: 1000px;
+      margin: 0 auto;
+  
+    }
+
+  p {
+      color: var(--text-color-white);
+      font-weight: var(--font-weight-bold);
+      font-size: 2rem;
+      text-align: center;
+      justify-content: center;
+      margin-top: 1rem;
+    }
+  }
+
+main {
+  display: flex;
+  flex-direction: column;
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--main-color-beige);
+  align-items: center;
+  justify-content: center;
+
+  p { 
+    margin-bottom: 1rem;
+  }
+}
+
+.projecten {
+  padding: var(--section-padding-y) var(--section-padding-x);
+}
+
+.stekjes-bieb {
+  box-sizing: border-box;
+  border: 1px solid var(--main-color-green);
+  border-radius: var(--radius);
+  padding: 15rem;
+  margin: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background-color: var(--main-color-beige);
+
+  h2 {
+    font-size: 5rem;
+    font-weight: var(--font-weight-extra-bold);
+    color: var(--main-color-green);
+  }
+  p {
+    font-size: 1.2rem;
+    font-weight: var(--font-weight-regular);
+    color: var(--main-color-green);
+  }
+}
+
+
+.zaden-bieb{
+  box-sizing: border-box;
+  border: 1px solid var(--main-color-green);
+  border-radius: var(--radius);
+  padding: 15rem;
+  margin: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background-color: var(--main-color-brown);
+
+  h2 {
+    font-size: 5rem;
+    font-weight: var(--font-weight-bold);
+    color: var(--main-color-beige);
+  }
+  p {
+    font-size: 1.2rem;
+    font-weight: var(--font-weight-regular);
+    color: var(--main-color-beige);
+  }
+
+}
+.geveltuin {
+  box-sizing: border-box;
+  border: 1px solid var(--main-color-green);
+  border-radius: var(--radius);
+  padding: 15rem;
+  margin: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background-color: var(--main-color-beige);
+
+  h2 {
+    font-size: 5rem;
+    font-weight: var(--font-weight-bold);
+    color: var(--main-color-green);
+  }
+  p {
+    font-size: 1.2rem;
+    font-weight: var(--font-weight-regular);
+    color: var(--main-color-green);
+  }
+}
+
+.over-buurtcampus {
+  background-color: var(--main-color-brown);
+  padding: 10rem;
+  text-align: center;
+
+  h2 {
+    font-size: 5rem;
+    font-weight: var(--font-weight-bold);
+    color: var(--main-color-beige);
+  }
+  p {
+    font-size: 1.2rem;
+    font-weight: var(--font-weight-regular);
+    color: var(--main-color-beige);
+  }
+
+  span {
+    color: var(--main-color-orange);
+  }
+}
+
+.partners {
+  padding: 10rem;
+  text-align: center;
+
+  h2 {
+    font-size: 5rem;
+    font-weight: var(--font-weight-bold);
+    color: var(--main-color-green);
+  }
+  p {
+    font-size: 1.2rem;
+    font-weight: var(--font-weight-regular);
+    color: var(--main-color-green);
+  }
+}
+
+
+
+
+ 
+
 /* ========== RESPONSIVE ========== */
 
 @media (min-width: 640px) {
@@ -225,3 +382,4 @@
     justify-content: space-between;
   }
 }
+
