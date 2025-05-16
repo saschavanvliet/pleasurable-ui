@@ -5,6 +5,16 @@ import express from 'express'
 // Importeer de Liquid package (ook als dependency via npm geïnstalleerd)
 import { Liquid } from 'liquidjs';
 
+console.log 
+// database stekjes 
+const stekjesResponse = await fetch('https://fdnd-agency.directus.app/items/bib_stekjes')
+const stekjesResponseJSON = await stekjesResponse.json()
+
+//afbeeldingen stekjes 
+const afbeeldingenResponse = await fetch('https://fdnd-agency.directus.app/items/bib_afbeeldingen?filter={%20%22type%22:%20{%20%22_eq%22:%20%22stekjes%22%20}}')
+const afbeeldingenResponseJSON = await afbeeldingenResponse.json()
+
+
 // Maak een nieuwe Express applicatie aan, waarin we de server configureren
 const app = express()
 
@@ -30,8 +40,11 @@ app.get('/', async function (request, response) {
 
 // Stekjes
 app.get('/stekjes', async function (request, response) {
-  response.render('stekjes.liquid')
-})
+  response.render('stekjes.liquid', {
+    stekjes: stekjesResponseJSON.data,
+    afbeeldingen: afbeeldingenResponseJSON.data
+  });
+});
 
 // Zaden
 app.get('/zaden', async function (request, response) {
