@@ -368,23 +368,56 @@ main {
   }
 }
 
-.partners {
-  padding: 10rem;
-  text-align: center;
+.form-section form {
+  display: flex;
+  flex-direction: column;
+}
 
-  h2 {
-    font-size: 5rem;
-    font-weight: var(--font-weight-bold);
-    color: var(--main-color-green);
+.form-section label {
+  margin-bottom: 0.3rem;
+  font-weight: bold;
+}
+
+.form-section input,
+.form-section textarea {
+  background-color: #f9edc7;
+  border: none;
+  padding: 0.75rem;
+  border-radius: 10px;
+  margin-bottom: 1.5rem;
+  font-size: 1rem;
+}
+
+.form-section textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.form-section button {
+  background-color: #ffa500;
+  color: #000;
+  font-weight: bold;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.form-section button:hover {
+  background-color: #e69500;
+}
+
+/* Responsive tweaks */
+@media (max-width: 600px) {
+  .aanmeld-container {
+    padding: 1.5rem 1rem;
   }
-  p {
-    font-size: 1.2rem;
-    font-weight: var(--font-weight-regular);
-    color: var(--main-color-green);
+
+  .intro h2 {
+    font-size: 1.5rem;
   }
 }
- 
-/* ========== RESPONSIVE ========== */
 
 @media (min-width: 769px) {
   .footer-content {
