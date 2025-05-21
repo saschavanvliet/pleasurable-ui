@@ -61,9 +61,9 @@ app.get('/agenda', async function (request, response) {
   response.render('agenda.liquid')
 })
 
-// Partners
-app.get('/partners', async function (request, response) {
-  response.render('partners.liquid')
+// Prikbord
+app.get('/prikbord', async function (request, response) {
+  response.render('prikbord.liquid')
 })
 
 // foot
