@@ -1,82 +1,94 @@
+/* =================== GOOGLE FONTS =================== */
 @import url('https://fonts.googleapis.com/css2?family=Jura:wght@300..700&family=Orbitron&family=Parkinsans:wght@300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Press+Start+2P&family=Varela+Round&display=swap');
 
-/* Kerem & Sascha variables */
-:root { 
-        --main-color-green: #4e7141;
-        --main-color-beige: #f9e9c2;
-        --main-color-orange: #ff8d06;
-        --main-color-brown: #491b02;
-    
-        --card-color-orange: #ff9a41;
-        --card-color-green: #3c593e;
-    
-        --text-color-white: #fff;
-        --text-color-black: #000;
-    
-        /* Font-weights */
-        --font-weight-thin: 100;
-        --font-weight-extra-light: 200;
-        --font-weight-light: 300;
-        --font-weight-regular: 400;
-        --font-weight-medium: 500;
-        --font-weight-semi-bold: 600;
-        --font-weight-bold: 700;
-        --font-weight-extra-bold: 800;
-        --font-weight-black: 900;
-    
-        --border-bigCard: 2em;
-        --border-card: 1.0625em;
-    
-        --section-padding-y: 4rem;
-        --section-padding-x: 7.5rem;
-    
-        --line-height-paragraph: 1.8em;
-        --line-height-paragraph-big-screen: 3em;
-    
-        --image-gradient: linear-gradient(180deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) 100%);
-        --radius:1rem;
-    }
+/* =================== ROOT VARIABLES =================== */
+:root {
+  /* Colors */
+  --main-color-green: #4e7141;
+  --main-color-beige: #f9e9c2;
+  --main-color-orange: #ff8d06;
+  --main-color-brown: #491b02;
+  --card-color-orange: #ff9a41;
+  --card-color-green: #3c593e;
+  --text-color-white: #fff;
+  --text-color-black: #000;
+  --text-color-beige: #f9e9c2;
+  --text-color-brown: #491b02;
 
-/* ========== STANDAARD NAV STYLING ========== */
+  /* Typography */
+  --font-weight-thin: 100;
+  --font-weight-extra-light: 200;
+  --font-weight-light: 300;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semi-bold: 600;
+  --font-weight-bold: 700;
+  --font-weight-extra-bold: 800;
+  --font-weight-black: 900;
 
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-  }
-  
-  nav {
-      color: white;
-  }
-  
-  .navbar {
-      background-color: var(--main-color-green);
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 1rem 2rem;
-      flex-wrap: wrap;
-  }
-  
-  .logo-container {
-      display: flex;
-      align-items: center;
-  }
-  
-  .logo {
-      width: 50px;
-      height: auto;
-      margin-left: 10px;
-  }
-  
-  h1 {
-      font-size: 1.5rem;
-      color: var(--text-light);
-      font-family: var(--font-primary);
-  }
+  /* Layout */
+  --border-bigCard: 2em;
+  --border-card: 1.0625em;
+  --section-padding-y: 4rem;
+  --section-padding-x: 7.5rem;
+  --line-height-paragraph: 1.8em;
+  --line-height-paragraph-big-screen: 3em;
+  --image-gradient: linear-gradient(180deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) 100%);
+  --radius: 1rem;
+}
 
+/* =================== BASE STYLES =================== */
+* {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-/* ========== HAMBURGER MENU ========== */
+body {
+  margin: 0;
+  overflow-x: hidden;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+main {
+  text-align: center;
+}
+
+h1, h2 {
+  font-size: 4rem;
+  font-weight: var(--font-weight-black);
+}
+
+/* =================== NAVIGATION =================== */
+nav {
+  color: white;
+}
+
+.navbar {
+  background-color: var(--main-color-green);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  flex-wrap: wrap;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  width: 50px;
+  height: auto;
+  margin-left: 10px;
+}
+
 .menu-toggle {
   font-size: 1.5rem;
   background: none;
@@ -84,17 +96,14 @@
   color: var(--text-light);
   cursor: pointer;
   display: block;
-  font-family: var(--font-primary);
 }
 
 @media (min-width: 769px) {
- 
   .menu-toggle {
     display: none;
   }
 }
 
-/* ========== NAV LINKS ========== */
 .nav-links {
   list-style: none;
   display: flex;
@@ -107,18 +116,6 @@
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.3s ease-in-out;
-  font-family: var(--font-primary);
-}
-
-@media (min-width: 769px) {
-  .nav-links {
-    flex-direction: row;
-    position: static;
-    background-color: transparent;
-    width: auto;
-    max-height: none;
-    gap: 1.5rem;
-  }
 }
 
 .nav-links.open {
@@ -130,19 +127,12 @@
   padding: 0.5rem 0;
 }
 
-@media (min-width: 769px) {
-  .nav-links li {
-    text-align: left;
-    padding: 0;
-  }
-}
-
-.nav-links a {
+.nav-links a,
+.nav-links details summary {
   color: var(--text-light);
   text-decoration: none;
   font-size: 1.1rem;
   padding: 0.5rem;
-  font-family: var(--font-primary);
 }
 
 .nav-links a:hover,
@@ -150,57 +140,61 @@
   color: var(--hover-light);
 }
 
-/* ========== DROPDOWN MENU ========== */
-.nav-links details summary {
-  cursor: pointer;
-  color: var(--text-light);
-  font-family: var(--font-primary);
-}
-
 .nav-links details ul {
+  display: none;
   background-color: var(--dropdown-bg);
   padding: 0.5rem;
-  position: static;
-  display: none;
 }
 
+.nav-links details[open] ul {
+  display: block;
+}
 
-  .nav-links details[open] ul {
-      display: block;
+@media (min-width: 769px) {
+  .nav-links {
+    flex-direction: row;
+    position: static;
+    background-color: transparent;
+    width: auto;
+    max-height: none;
+    gap: 1.5rem;
   }
-  
-/* ========== STANDAARD FOOTER STYLING ========== */
 
-.footer {
-  background-color: var(--card-color-green);
-  padding: 2rem;
-  color: #e9dcbe; /* beige kleur voor tekst */
-  font-family: 'Poppins', sans-serif;
+  .nav-links li {
+    padding: 0;
+    text-align: left;
+  }
 }
 
+<<<<<<< Updated upstream
 .footer-content {
+=======
+/* =================== Hero =================== */
+.page-header {
+  background: url("../assets/home-background.png") center/cover no-repeat;
+>>>>>>> Stashed changes
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  align-items: center;
+  justify-content: center;
+  height: 90vh;
 }
 
-.footer-section {
-  flex: 1;
-  min-width: 200px;
+.page-header h1,
+.page-header h2 {
+  color: white;
 }
 
-.footer-section h2 {
-  font-size: 1.2rem;
-  font-weight: 600;
-  margin-bottom: 0.5rem;
-  text-transform: uppercase;
-  background-color: var(--card-color-green);
+.page-header h1 {
+  font-size: clamp(2rem, 4vw, 4.5rem);
+  margin-bottom: 0.5em;
 }
 
-.footer-section address {
-  font-style: normal;
+.page-header h2 {
+  font-size: 2rem;
 }
 
+<<<<<<< Updated upstream
 .footer-section address p,
 .footer-section address a {
   font-size: 1rem;
@@ -208,6 +202,12 @@
   color: #e9dcbe;
   text-decoration: none;
   display: block;
+=======
+/* =================== STEKJES BIEB =================== */
+/* =================== BIEB BLOK =================== */
+.bieb-blok {
+  padding: clamp(1.5rem, 2vw, 3rem) 1rem;
+>>>>>>> Stashed changes
 }
 
 .footer-section address a:hover {
@@ -419,10 +419,87 @@ main {
   }
 }
 
-@media (min-width: 769px) {
+
+
+
+
+
+
+
+
+
+
+/* =================== FOOTER =================== */
+.footer {
+  background-color: var(--card-color-green);
+  padding: 2rem;
+  color: #e9dcbe;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column; /* Op mobiel: secties onder elkaar */
+  gap: 2rem;
+  align-items: flex-start;
+  text-align: left;
+}
+
+@media (min-width: 740px) {
   .footer-content {
-    flex-direction: row;
-    justify-content: space-between;
+    flex-direction: row; /* Op tablet en desktop: secties naast elkaar */
+    justify-content: center; /* Centreren van secties */
+    align-items: flex-start;
+    text-align: center;
+  }
+
+  .footer-section {
+    flex: 0 0 250px; /* Breedte van elke sectie op tablet en desktop */
   }
 }
 
+.footer-section {
+  min-width: 200px; /* Minimale breedte van elke sectie */
+}
+
+.footer-section h2 {
+  font-size: 1.2rem;
+  font-weight: var(--font-weight-semi-bold);
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  background-color: var(--card-color-green);
+}
+
+.footer-section address {
+  font-style: normal;
+}
+
+.footer-section address p,
+.footer-section address a {
+  font-size: 1rem;
+  margin: 0.2rem 0;
+  text-decoration: none;
+  display: block;
+}
+
+.footer-section address a:hover {
+  text-decoration: underline;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding-left: 1.25rem;
+  margin: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 0.5rem;
+}
+
+.footer-section ul li a {
+  color: var(--main-color-beige);
+  text-decoration: none;
+}
+
+.footer-section ul li a:hover {
+  text-decoration: underline;
+}
