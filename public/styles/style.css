@@ -166,13 +166,15 @@ nav {
   }
 }
 
-<<<<<<< Updated upstream
+
 .footer-content {
-=======
+
+/* =================== Hero =================== */
+
 /* =================== Hero =================== */
 .page-header {
   background: url("../assets/home-background.png") center/cover no-repeat;
->>>>>>> Stashed changes
+
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -194,7 +196,7 @@ nav {
   font-size: 2rem;
 }
 
-<<<<<<< Updated upstream
+
 .footer-section address p,
 .footer-section address a {
   font-size: 1rem;
@@ -202,169 +204,239 @@ nav {
   color: #e9dcbe;
   text-decoration: none;
   display: block;
-=======
+
+
+
 /* =================== STEKJES BIEB =================== */
 /* =================== BIEB BLOK =================== */
 .bieb-blok {
   padding: clamp(1.5rem, 2vw, 3rem) 1rem;
->>>>>>> Stashed changes
+
+
 }
 
-.footer-section address a:hover {
-  text-decoration: underline;
+
+
+.bieb-blok__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: clamp(1rem, 2vw, 2rem);
 }
 
-.footer-section ul {
-  list-style: none;
-  padding: 0;
+.bieb-blok__text {
+  max-width: 600px;
+  text-align: center;
+  font-size: clamp(1rem, 1.2vw, 1.15rem);
+  line-height: 1.6;
+  padding: 0 1rem;
+}
+
+
+
+.bieb-blok__image {
+  width: 100%;
+  max-width: 600px;
+}
+
+.bieb-blok__image img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  border: 4px solid transparent;
+}
+
+
+
+/* Blok specifieke kleuren */
+.stekjes-bieb {
+  background-color: var(--main-color-beige);
+  color: var(--card-color-green);
+}
+
+.zaden-bieb {
+  background-color: var(--main-color-brown);
+  color: var(--main-color-beige);
+}
+
+.geveltuin {
+  background-color: var(--main-color-beige);
+  color: var(--card-color-green);
+}
+
+/* Tablet */
+@media (min-width: 768px) {
+  .bieb-blok__container {
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap; /* NIEUW */
+  }
+
+  .bieb-blok__container.reverse {
+    flex-direction: row-reverse;
+  }
+
+  .bieb-blok__text,
+  .bieb-blok__image {
+    flex: 1;
+    padding: 1rem;
+  }
+
+  .bieb-blok__text {
+    text-align: left;
+    font-size: clamp(1.1rem, 1.3vw, 1.25rem);
+    line-height: 1.75;
+  }
+
+  .bieb-blok__image {
+    flex: 0 0 auto;
+  }
+}
+
+
+
+/* =================== BUURTCAMPUS =================== */
+.buurtcampus {
+  background-color: var(--main-color-brown);
+  color: var(--text-color-beige);
+  padding: clamp(2rem, 5vw, 4rem) 1rem;
+  text-align: center;
+}
+
+.buurtcampus h2 {
+  font-size: clamp(1.75rem, 3vw, 2.5rem);
+  margin-bottom: 1rem;
+}
+
+.buurtcampus p {
+  font-size: clamp(1rem, 1.2vw, 1.2rem);
+  line-height: 1.7;
+  max-width: 700px;
+  margin: 0 auto 1rem auto;
+}
+
+
+/* =================== PARTNERS =================== */
+.partners {
+  background-color: var(--main-color-beige);
+  color: var(--card-color-green);
+  padding: clamp(2rem, 5vw, 4rem) 1rem;
+  text-align: center;
+}
+
+.partners h2 {
+  font-size: clamp(1.75rem, 3vw, 2.5rem);
+  margin-bottom: 1rem;
+}
+
+.partners p {
+  font-size: clamp(1rem, 1.2vw, 1.2rem);
+  line-height: 1.7;
+  max-width: 700px;
+  margin: 0 auto 1rem auto;
+}
+
+
+
+/* =================== Contact =================== */
+
+
+.aanmeld-container {
+  display: flex;
+  flex-direction: column;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+body {
   margin: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #4b1f05;
+  color: #fff;
 }
 
-.footer-section ul li {
-  margin-bottom: 0.5rem;
+.aanmeld-container {
+  display: flex;
+  flex-direction: column;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
 }
-
-.footer-section ul li a {
-  color: #e9dcbe;
-  text-decoration: none;
-}
-
-.footer-section ul li a:hover {
-  text-decoration: underline;
-}
-
-/* ========== HOMEPAGINA STYLING ========== */
 
 .intro {
-  font-family: 'Poppins', sans-serif;
-  background-image: url('../assets/home-background.png');
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 750px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-
-  h1 { 
-    color: var(--text-color-white);
-      font-size: 6rem;
-      font-weight: var(--font-weight-extra-bold);
-      text-align: center;
-      justify-content: center;
-      max-width: 1000px;
-      margin: 0 auto;
-  
-    }
-
-  p {
-      color: var(--text-color-white);
-      font-weight: var(--font-weight-bold);
-      font-size: 2rem;
-      text-align: center;
-      justify-content: center;
-      margin-top: 1rem;
-    }
-  }
-
-main {
-  display: flex;
-  flex-direction: column;
-  font-family: 'Poppins', sans-serif;
-  background-color: var(--main-color-beige);
-  align-items: center;
-  justify-content: center;
-
-  p { 
-    margin-bottom: 1rem;
-  }
-}
-
-.projecten {
-  padding: var(--section-padding-y) var(--section-padding-x);
-}
-
-.stekjes-bieb {
-  box-sizing: border-box;
-  border: 1px solid var(--main-color-green);
-  border-radius: var(--radius);
-  padding: 15rem;
-  margin: 1rem;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  background-color: var(--main-color-beige);
-
-  h2 {
-    font-size: 5rem;
-    font-weight: var(--font-weight-extra-bold);
-    color: var(--main-color-green);
-  }
-  p {
-    font-size: 1.2rem;
-    font-weight: var(--font-weight-regular);
-    color: var(--main-color-green);
-  }
-}
-
-
-.zaden-bieb{
-  box-sizing: border-box;
-  border: 1px solid var(--main-color-green);
-  border-radius: var(--radius);
-  padding: 15rem;
-  margin: 1rem;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  background-color: var(--main-color-brown);
-
-  h2 {
-    font-size: 5rem;
-    font-weight: var(--font-weight-bold);
-    color: var(--main-color-beige);
-  }
-  p {
-    font-size: 1.2rem;
-    font-weight: var(--font-weight-regular);
-    color: var(--main-color-beige);
-  }
-
-}
-.geveltuin {
-  box-sizing: border-box;
-  border: 1px solid var(--main-color-green);
-  border-radius: var(--radius);
-  padding: 15rem;
-  margin: 1rem;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  background-color: var(--main-color-beige);
-
-  h2 {
-    font-size: 5rem;
-    font-weight: var(--font-weight-bold);
-    color: var(--main-color-green);
-  }
-  p {
-    font-size: 1.2rem;
-    font-weight: var(--font-weight-regular);
-    color: var(--main-color-green);
-  }
-}
-
-.over-buurtcampus {
-  background-color: var(--main-color-brown);
-  padding: 10rem;
   text-align: center;
+  margin-bottom: 2rem;
+}
 
-  h2 {
-    font-size: 5rem;
-    font-weight: var(--font-weight-bold);
-    color: var(--main-color-beige);
-  }
-  p {
-    font-size: 1.2rem;
-    font-weight: var(--font-weight-regular);
-    color: var(--main-color-beige);
+.intro h2 {
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+  color: #fff;
+}
+
+.intro h2 .accent,
+.intro h2 .accent-punct {
+  color: #ffa500;
+}
+
+.intro p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #ddd;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.form-section form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-section label {
+  margin-bottom: 0.3rem;
+  font-weight: bold;
+}
+
+.form-section input,
+.form-section textarea {
+  background-color: #f9edc7;
+  border: none;
+  padding: 0.75rem;
+  border-radius: 10px;
+  margin-bottom: 1.5rem;
+  font-size: 1rem;
+}
+
+.form-section textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.form-section button {
+  background-color: #ffa500;
+  color: #000;
+  font-weight: bold;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.form-section button:hover {
+  background-color: #e69500;
+}
+
+/* Responsiveness */
+@media (max-width: 600px) {
+  .aanmeld-container {
+    padding: 1.5rem 1rem;
   }
 
-  span {
-    color: var(--main-color-orange);
+  .intro h2 {
+    font-size: 1.5rem;
   }
 }
 
@@ -420,15 +492,8 @@ main {
 }
 
 
-
-
-
-
-
-
-
-
-
+  
+  
 /* =================== FOOTER =================== */
 .footer {
   background-color: var(--card-color-green);
@@ -473,6 +538,7 @@ main {
   font-style: normal;
 }
 
+
 .footer-section address p,
 .footer-section address a {
   font-size: 1rem;
@@ -503,3 +569,4 @@ main {
 .footer-section ul li a:hover {
   text-decoration: underline;
 }
+
