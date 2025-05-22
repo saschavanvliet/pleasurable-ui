@@ -77,6 +77,11 @@ app.get('/contact', async function (request, response) {
   response.render('contact.liquid')
 })
 
+// 404 pagina	
+app.get('/404', async function (request, response) {
+  response.render('404.liquid')
+})
+
 // Stel het poortnummer in waar Express op moet luisteren
 app.set('port', process.env.PORT || 8000)
 
