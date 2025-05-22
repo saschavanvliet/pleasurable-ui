@@ -551,6 +551,14 @@ body {
   text-decoration: underline;
 }
 
+img[loading="lazy"] {
+  opacity: 0;
+  transition: opacity 0.5s ease-in;
+}
+
+img[loading="lazy"].loaded {
+  opacity: 1;
+}
 .footer-section ul {
   list-style: none;
   padding-left: 1.25rem;
