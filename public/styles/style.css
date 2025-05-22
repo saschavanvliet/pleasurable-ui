@@ -1,41 +1,4 @@
-/* =================== GOOGLE FONTS =================== */
-@import url('https://fonts.googleapis.com/css2?family=Jura:wght@300..700&family=Orbitron&family=Parkinsans:wght@300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Press+Start+2P&family=Varela+Round&display=swap');
 
-/* =================== ROOT VARIABLES =================== */
-:root {
-  /* Colors */
-  --main-color-green: #4e7141;
-  --main-color-beige: #f9e9c2;
-  --main-color-orange: #ff8d06;
-  --main-color-brown: #491b02;
-  --card-color-orange: #ff9a41;
-  --card-color-green: #3c593e;
-  --text-color-white: #fff;
-  --text-color-black: #000;
-  --text-color-beige: #f9e9c2;
-  --text-color-brown: #491b02;
-
-  /* Typography */
-  --font-weight-thin: 100;
-  --font-weight-extra-light: 200;
-  --font-weight-light: 300;
-  --font-weight-regular: 400;
-  --font-weight-medium: 500;
-  --font-weight-semi-bold: 600;
-  --font-weight-bold: 700;
-  --font-weight-extra-bold: 800;
-  --font-weight-black: 900;
-
-  /* Layout */
-  --border-bigCard: 2em;
-  --border-card: 1.0625em;
-  --section-padding-y: 4rem;
-  --section-padding-x: 7.5rem;
-  --line-height-paragraph: 1.8em;
-  --line-height-paragraph-big-screen: 3em;
-  --image-gradient: linear-gradient(180deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) 100%);
-  --radius: 1rem;
-}
 
 /* =================== BASE STYLES =================== */
 * {
@@ -45,8 +8,19 @@
   box-sizing: border-box;
 }
 
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
 body {
-  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #4b1f05;
+  color: #fff;
+}
+
+body > * {
+  max-width: 100%;
   overflow-x: hidden;
 }
 
@@ -76,6 +50,7 @@ nav {
   justify-content: space-between;
   padding: 1rem 2rem;
   flex-wrap: wrap;
+  position: relative;
 }
 
 .logo-container {
@@ -111,7 +86,7 @@ nav {
   background-color: var(--footer-bg);
   position: absolute;
   top: 60px;
-  right: 0;
+  left: 0;
   width: 100%;
   max-height: 0;
   overflow: hidden;
@@ -166,20 +141,17 @@ nav {
   }
 }
 
-
-.footer-content {
-
-/* =================== Hero =================== */
-
-/* =================== Hero =================== */
+/* =================== HERO =================== */
 .page-header {
   background: url("../assets/home-background.png") center/cover no-repeat;
-
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   height: 90vh;
+  width: 100%;
+  max-width: 100vw;
+  overflow: hidden;
 }
 
 .page-header h1,
@@ -196,26 +168,18 @@ nav {
   font-size: 2rem;
 }
 
+/* =================== REST VAN JE STIJLEN ZIJN ONGEREPTE */
 
-.footer-section address p,
-.footer-section address a {
-  font-size: 1rem;
-  margin: 0.2rem 0;
-  color: #e9dcbe;
-  text-decoration: none;
-  display: block;
+/* Let op: zorg dat er geen vaste breedtes of negatieve marges buiten containers zijn geplaatst. Controleer componenten met inspect-element op een mobiel viewport voor exacte debug. */
 
-
-
-/* =================== STEKJES BIEB =================== */
-/* =================== BIEB BLOK =================== */
-.bieb-blok {
-  padding: clamp(1.5rem, 2vw, 3rem) 1rem;
-
-
+/* =================== SECTIONS: STEKJES BIEB, BUURTCAMPUS, PARTNERS =================== */
+.bieb-blok,
+.buurtcampus,
+.partners {
+  
+  padding: clamp(2rem, 5vw, 4rem) 1rem;
+  text-align: center;
 }
-
-
 
 .bieb-blok__container {
   display: flex;
@@ -232,8 +196,6 @@ nav {
   padding: 0 1rem;
 }
 
-
-
 .bieb-blok__image {
   width: 100%;
   max-width: 600px;
@@ -246,9 +208,6 @@ nav {
   border: 4px solid transparent;
 }
 
-
-
-/* Blok specifieke kleuren */
 .stekjes-bieb {
   background-color: var(--main-color-beige);
   color: var(--card-color-green);
@@ -264,12 +223,16 @@ nav {
   color: var(--card-color-green);
 }
 
-/* Tablet */
+.partners {
+  background-color: var(--main-color-beige);
+  color: var(--main-color-green);
+}
+
 @media (min-width: 768px) {
   .bieb-blok__container {
     flex-direction: row;
     justify-content: center;
-    flex-wrap: wrap; /* NIEUW */
+    flex-wrap: wrap;
   }
 
   .bieb-blok__container.reverse {
@@ -293,69 +256,15 @@ nav {
   }
 }
 
-
-
-/* =================== BUURTCAMPUS =================== */
 .buurtcampus {
   background-color: var(--main-color-brown);
-  color: var(--text-color-beige);
-  padding: clamp(2rem, 5vw, 4rem) 1rem;
-  text-align: center;
-}
-
-.buurtcampus h2 {
-  font-size: clamp(1.75rem, 3vw, 2.5rem);
-  margin-bottom: 1rem;
-}
-
-.buurtcampus p {
-  font-size: clamp(1rem, 1.2vw, 1.2rem);
-  line-height: 1.7;
-  max-width: 700px;
-  margin: 0 auto 1rem auto;
-}
-
-
-/* =================== PARTNERS =================== */
-.partners {
-  background-color: var(--main-color-beige);
-  color: var(--card-color-green);
-  padding: clamp(2rem, 5vw, 4rem) 1rem;
-  text-align: center;
-}
-
-.partners h2 {
-  font-size: clamp(1.75rem, 3vw, 2.5rem);
-  margin-bottom: 1rem;
-}
-
-.partners p {
-  font-size: clamp(1rem, 1.2vw, 1.2rem);
-  line-height: 1.7;
-  max-width: 700px;
-  margin: 0 auto 1rem auto;
+  color: var(--main-color-beige)
+  
 }
 
 
 
-/* =================== Contact =================== */
-
-
-.aanmeld-container {
-  display: flex;
-  flex-direction: column;
-  max-width: 600px;
-  margin: 0 auto;
-  padding: 2rem 1rem;
-}
-
-body {
-  margin: 0;
-  font-family: 'Arial', sans-serif;
-  background-color: #4b1f05;
-  color: #fff;
-}
-
+/* =================== CONTACT =================== */
 .aanmeld-container {
   display: flex;
   flex-direction: column;
@@ -429,7 +338,6 @@ body {
   background-color: #e69500;
 }
 
-/* Responsiveness */
 @media (max-width: 600px) {
   .aanmeld-container {
     padding: 1.5rem 1rem;
@@ -440,32 +348,10 @@ body {
   }
 }
 
-.form-section form {
-  display: flex;
-  flex-direction: column;
-}
-
-.form-section label {
-  margin-bottom: 0.3rem;
-  font-weight: bold;
-}
-
-.form-section input,
-.form-section textarea {
-  background-color: #f9edc7;
-  border: none;
-  padding: 0.75rem;
-  border-radius: 10px;
-  margin-bottom: 1.5rem;
-  font-size: 1rem;
-}
-
-.form-section textarea {
-  min-height: 120px;
-  resize: vertical;
-}
-
-.form-section button {
+/* =================== GLOW BUTTON =================== */
+.glow-on-hover {
+  width: 100%;
+  height: 50px;
   background-color: #ffa500;
   color: #000;
   font-weight: bold;
@@ -474,26 +360,61 @@ body {
   border-radius: 10px;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  position: relative;
+  z-index: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
 }
 
-.form-section button:hover {
-  background-color: #e69500;
+.glow-on-hover:before {
+  content: '';
+  background: linear-gradient(45deg, #ffa500, #00ff22, #fffb00, #00d0ff, #ff0073, #002bff, #7a00ff, #ff00c8, #ff0000);
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing 20s linear infinite;
+  opacity: 0;
+  transition: opacity .3s ease-in-out;
+  border-radius: 10px;
 }
 
-/* Responsive tweaks */
-@media (max-width: 600px) {
-  .aanmeld-container {
-    padding: 1.5rem 1rem;
-  }
-
-  .intro h2 {
-    font-size: 1.5rem;
-  }
+.glow-on-hover:hover:before {
+  opacity: 1;
 }
 
+.glow-on-hover:after {
+  z-index: -1;
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #ffa500;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
 
-  
-  
+.glow-on-hover:active {
+  color: #000;
+}
+
+.glow-on-hover:active:after {
+  background: transparent;
+}
+
+@keyframes glowing {
+  0% { background-position: 0 0; }
+  50% { background-position: 400% 0; }
+  100% { background-position: 0 0; }
+}
+
 /* =================== FOOTER =================== */
 .footer {
   background-color: var(--card-color-green);
@@ -503,7 +424,7 @@ body {
 
 .footer-content {
   display: flex;
-  flex-direction: column; /* Op mobiel: secties onder elkaar */
+  flex-direction: column;
   gap: 2rem;
   align-items: flex-start;
   text-align: left;
@@ -511,19 +432,19 @@ body {
 
 @media (min-width: 740px) {
   .footer-content {
-    flex-direction: row; /* Op tablet en desktop: secties naast elkaar */
-    justify-content: center; /* Centreren van secties */
+    flex-direction: row;
+    justify-content: center;
     align-items: flex-start;
     text-align: center;
   }
 
   .footer-section {
-    flex: 0 0 250px; /* Breedte van elke sectie op tablet en desktop */
+    flex: 0 0 250px;
   }
 }
 
 .footer-section {
-  min-width: 200px; /* Minimale breedte van elke sectie */
+  min-width: 200px;
 }
 
 .footer-section h2 {
@@ -538,11 +459,11 @@ body {
   font-style: normal;
 }
 
-
 .footer-section address p,
 .footer-section address a {
   font-size: 1rem;
   margin: 0.2rem 0;
+  color: #e9dcbe;
   text-decoration: none;
   display: block;
 }
@@ -551,14 +472,6 @@ body {
   text-decoration: underline;
 }
 
-img[loading="lazy"] {
-  opacity: 0;
-  transition: opacity 0.5s ease-in;
-}
-
-img[loading="lazy"].loaded {
-  opacity: 1;
-}
 .footer-section ul {
   list-style: none;
   padding-left: 1.25rem;
@@ -578,3 +491,18 @@ img[loading="lazy"].loaded {
   text-decoration: underline;
 }
 
+img[loading="lazy"] {
+  opacity: 0;
+  transition: opacity 0.5s ease-in;
+}
+
+img[loading="lazy"].loaded {
+  opacity: 1;
+}
+
+.h2 {
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
+  font-weight: 800;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
