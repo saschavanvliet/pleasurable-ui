@@ -1,5 +1,20 @@
 {% render 'partials/head.liquid', title: 'Geveltuin' %}
+{% render 'partials/nav.liquid', title: 'Geveltuin' %}
 
+<main>
+
+  {% for tekstje in contentgeveltuin %}
+    <p>{{ tekstje.text }}</p>
+  {% endfor %}
+
+  <ul>
+    {% for afbeelding in afbeeldingengeveltuin %}
+      <li>
+        <img src="https://fdnd-agency.directus.app/assets/{{ afbeelding.foto }}" alt="Geveltuin afbeelding" width="400px">
+      </li>
+    {% endfor %}
+  </ul>
+</main>
 
 
 {% render 'partials/foot.liquid' %}

@@ -10,10 +10,20 @@ console.log
 const stekjesResponse = await fetch('https://fdnd-agency.directus.app/items/bib_stekjes')
 const stekjesResponseJSON = await stekjesResponse.json()
 
-//afbeeldingen stekjes 
-const afbeeldingenResponse = await fetch('https://fdnd-agency.directus.app/items/bib_afbeeldingen?filter={%20%22type%22:%20{%20%22_eq%22:%20%22stekjes%22%20}}')
-const afbeeldingenResponseJSON = await afbeeldingenResponse.json()
+const afbeeldingen =  'https://fdnd-agency.directus.app/items/bib_afbeeldingen'
 
+// afbeeldingen stekjes 
+const afbeeldingenstekjesResponse = await fetch(afbeeldingen + '?filter={%20%22type%22:%20{%20%22_eq%22:%20%22stekjes%22%20}}')
+const afbeeldingenstekjesResponseJSON = await afbeeldingenstekjesResponse.json()
+
+const content = 'https://fdnd-agency.directus.app/items/bib_content'
+
+// geveltuin
+const afbeeldingengeveltuinResponse = await fetch(afbeeldingen + '?filter[type][_eq]=geveltuin')
+const afbeeldingengeveltuinResponseJSON = await afbeeldingengeveltuinResponse.json()
+
+const contentgeveltuinResponse = await fetch(content + '?filter[id][_eq]=3')
+const contentgeveltuinResponseJSON = await contentgeveltuinResponse.json()
 
 // Maak een nieuwe Express applicatie aan, waarin we de server configureren
 const app = express()
@@ -42,7 +52,7 @@ app.get('/', async function (request, response) {
 app.get('/stekjes', async function (request, response) {
   response.render('stekjes.liquid', {
     stekjes: stekjesResponseJSON.data,
-    afbeeldingen: afbeeldingenResponseJSON.data
+    afbeeldingenstekjes: afbeeldingenstekjesResponseJSON.data
   });
 });
 
@@ -53,12 +63,17 @@ app.get('/zaden', async function (request, response) {
 
 // Geveltuin
 app.get('/geveltuin', async function (request, response) {
-  response.render('geveltuin.liquid')
+  response.render('geveltuin.liquid', {
+    afbeeldingengeveltuin: afbeeldingengeveltuinResponseJSON.data,
+    contentgeveltuin: contentgeveltuinResponseJSON.data
+  });
 })
+
 
 // Agenda
 app.get('/agenda', async function (request, response) {
-  response.render('agenda.liquid')
+  response.render('agenda.liquid', {
+  });
 })
 
 // Partners
