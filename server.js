@@ -77,6 +77,11 @@ app.get('/contact', async function (request, response) {
   response.render('contact.liquid')
 })
 
+// expiriment
+app.get('/expiriment', async function (request, response) {
+  response.render('expiriment.liquid')
+})
+
 // Stel het poortnummer in waar Express op moet luisteren
 app.set('port', process.env.PORT || 8000)
 
