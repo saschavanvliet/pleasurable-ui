@@ -65,6 +65,8 @@ app.get('/agenda', async function (request, response) {
 app.get('/prikbord', async function (request, response) {
   response.render('prikbord.liquid')
 })
+app.get('/project', async function (req, res) {
+    res.render('project.liquid', { projects: data.projects, uiState });
 
 // foot
 app.get('/foot', async function (request, response) {
