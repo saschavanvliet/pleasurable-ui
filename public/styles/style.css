@@ -166,13 +166,9 @@ nav {
   }
 }
 
-<<<<<<< Updated upstream
-.footer-content {
-=======
 /* =================== Hero =================== */
 .page-header {
   background: url("../assets/home-background.png") center/cover no-repeat;
->>>>>>> Stashed changes
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -194,7 +190,6 @@ nav {
   font-size: 2rem;
 }
 
-<<<<<<< Updated upstream
 .footer-section address p,
 .footer-section address a {
   font-size: 1rem;
@@ -202,13 +197,11 @@ nav {
   color: #e9dcbe;
   text-decoration: none;
   display: block;
-=======
 /* =================== STEKJES BIEB =================== */
 /* =================== BIEB BLOK =================== */
 .bieb-blok {
   padding: clamp(1.5rem, 2vw, 3rem) 1rem;
->>>>>>> Stashed changes
-}
+}}
 
 .footer-section address a:hover {
   text-decoration: underline;
