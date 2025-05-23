@@ -77,6 +77,12 @@ app.get('/contact', async function (request, response) {
   response.render('contact.liquid')
 })
 
+// Sascha interactie
+app.get('/saschainteractie', async function (request, response) {
+  response.render('saschainteractie.liquid')
+})
+
+
 // Stel het poortnummer in waar Express op moet luisteren
 app.set('port', process.env.PORT || 8000)
 

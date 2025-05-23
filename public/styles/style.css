@@ -563,3 +563,26 @@ body {
   text-decoration: underline;
 }
 
+/* Sascha animatie */
+.contactpagina-sascha {
+  margin: 4em;
+}
+
+.contactlink-sascha {
+  position: relative;
+  background: var(--main-color-orange);
+  padding: 1.5em;
+  border-radius: 25px;
+  color: var(--text-color-white);
+  text-decoration: none;
+  font-size: 1rem;
+  transition: padding 0.3s ease;
+}
+
+.contactlink-sascha:hover {
+  padding-bottom: 2.5em; 
+}
+
+.bloemetje.sascha {
+  position: absolute;
+}
