@@ -61,10 +61,8 @@ app.get('/agenda', async function (request, response) {
   response.render('agenda.liquid')
 })
 
-// Prikbord
-app.get('/prikbord', async function (request, response) {
-  response.render('prikbord.liquid')
-})
+// Prikbord (route)
+// GET-route
 app.get('/project', async function (req, res) {
     res.render('project.liquid', { projects: data.projects, uiState });
 
