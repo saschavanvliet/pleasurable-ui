@@ -10,8 +10,12 @@
   <ul>
     {% for workshop in workshops %}
       <li>
+        <h1>{{ workshop.naam }}</h1>
         <p>{{ workshop.omschrijving }}</p>
         <img src="https://fdnd-agency.directus.app/assets/{{ workshop.foto }}" alt="Geveltuin afbeelding" width="400px">
+        <p>{{ workshop.kosten }}</p>
+        <p>{{ workshop.locatie }}</p>
+        <p>{{ workshop.datum }}</p>
       </li>
     {% endfor %}
   </ul>
