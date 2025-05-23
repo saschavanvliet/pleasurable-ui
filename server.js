@@ -36,14 +36,6 @@ app.get('/stekjes', async function (request, response) {
     const afbeeldingenResponse = await fetch('https://fdnd-agency.directus.app/items/bib_afbeeldingen?filter={%20%22type%22:%20{%20%22_eq%22:%20%22stekjes%22%20}}')
     const afbeeldingenResponseJSON = await afbeeldingenResponse.json()
 
-    // agenda
-    const contentagendaResponse = await fetch(content + '?filter[id][_eq]=5')
-    const contentagendaResponseJSON = await contentagendaResponse.json()
-
-    const workshopsResponse = await fetch('https://fdnd-agency.directus.app/items/bib_workshops')
-    const workshopsResponseJSON = await workshopsResponse.json()
-
-
     // Render de stekjespagina met data
     response.render('stekjes.liquid', {
       stekjes: stekjesResponseJSON.data,
@@ -67,7 +59,15 @@ app.get('/geveltuin', async function (request, response) {
 
 // Agenda
 app.get('/agenda', async function (request, response) {
-  response.render('agenda.liquid' {
+      // agenda
+      const content = 'https://fdnd-agency.directus.app/items/bib_content'
+
+      const contentagendaResponse = await fetch(content + '?filter[id][_eq]=5')
+      const contentagendaResponseJSON = await contentagendaResponse.json()
+  
+      const workshopsResponse = await fetch('https://fdnd-agency.directus.app/items/bib_workshops')
+      const workshopsResponseJSON = await workshopsResponse.json()
+  response.render('agenda.liquid', {
     contentagenda: contentagendaResponseJSON.data,
     workshops: workshopsResponseJSON.data
   });

@@ -1,5 +1,20 @@
 {% render 'partials/head.liquid', title: 'Agenda' %}
+{% render 'partials/nav.liquid', title: 'Agenda' %}
 
+<main>
 
+  {% for tekstje in contentagenda %}
+    <p>{{ tekstje.text }}</p>
+  {% endfor %}
+
+  <ul>
+    {% for workshop in workshops %}
+      <li>
+        <p>{{ workshop.omschrijving }}</p>
+        <img src="https://fdnd-agency.directus.app/assets/{{ workshop.foto }}" alt="Geveltuin afbeelding" width="400px">
+      </li>
+    {% endfor %}
+  </ul>
+</main>
 
 {% render 'partials/foot.liquid' %}
