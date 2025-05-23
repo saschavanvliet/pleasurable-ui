@@ -45,8 +45,36 @@
   box-sizing: border-box;
 }
 
+<<<<<<< Updated upstream
 body {
   margin: 0;
+=======
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #4b1f05;
+  color: #fff;
+}
+
+body > * {
+  max-width: 100%;
+  font-family: 'Arial', sans-serif;
+  background-color: #4b1f05;
+  color: #fff;
+}
+
+body > * {
+  max-width: 100%;
+>>>>>>> Stashed changes
   overflow-x: hidden;
 }
 
@@ -76,6 +104,11 @@ nav {
   justify-content: space-between;
   padding: 1rem 2rem;
   flex-wrap: wrap;
+<<<<<<< Updated upstream
+=======
+  position: relative;
+  position: relative;
+>>>>>>> Stashed changes
 }
 
 .logo-container {
@@ -111,7 +144,12 @@ nav {
   background-color: var(--footer-bg);
   position: absolute;
   top: 60px;
+<<<<<<< Updated upstream
   right: 0;
+=======
+  left: 0;
+  left: 0;
+>>>>>>> Stashed changes
   width: 100%;
   max-height: 0;
   overflow: hidden;
@@ -167,9 +205,15 @@ nav {
 }
 
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 .footer-content {
 =======
 /* =================== Hero =================== */
+=======
+/* =================== HERO =================== */
+
+/* =================== HERO =================== */
+>>>>>>> Stashed changes
 .page-header {
   background: url("../assets/home-background.png") center/cover no-repeat;
 >>>>>>> Stashed changes
@@ -178,6 +222,15 @@ nav {
   align-items: center;
   justify-content: center;
   height: 90vh;
+<<<<<<< Updated upstream
+=======
+  width: 100%;
+  max-width: 100vw;
+  overflow: hidden;
+  width: 100%;
+  max-width: 100vw;
+  overflow: hidden;
+>>>>>>> Stashed changes
 }
 
 .page-header h1,
@@ -195,6 +248,7 @@ nav {
 }
 
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 .footer-section address p,
 .footer-section address a {
   font-size: 1rem;
@@ -207,6 +261,29 @@ nav {
 /* =================== BIEB BLOK =================== */
 .bieb-blok {
   padding: clamp(1.5rem, 2vw, 3rem) 1rem;
+>>>>>>> Stashed changes
+=======
+/* =================== REST VAN JE STIJLEN ZIJN ONGEREPTE */
+
+/* Let op: zorg dat er geen vaste breedtes of negatieve marges buiten containers zijn geplaatst. Controleer componenten met inspect-element op een mobiel viewport voor exacte debug. */
+/* =================== REST VAN JE STIJLEN ZIJN ONGEREPTE */
+
+/* Let op: zorg dat er geen vaste breedtes of negatieve marges buiten containers zijn geplaatst. Controleer componenten met inspect-element op een mobiel viewport voor exacte debug. */
+
+/* =================== SECTIONS: STEKJES BIEB, BUURTCAMPUS, PARTNERS =================== */
+.bieb-blok,
+.buurtcampus,
+.partners {
+  
+  padding: clamp(2rem, 5vw, 4rem) 1rem;
+  text-align: center;
+/* =================== SECTIONS: STEKJES BIEB, BUURTCAMPUS, PARTNERS =================== */
+.bieb-blok,
+.buurtcampus,
+.partners {
+  
+  padding: clamp(2rem, 5vw, 4rem) 1rem;
+  text-align: center;
 >>>>>>> Stashed changes
 }
 
@@ -335,10 +412,29 @@ main {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   background-color: var(--main-color-beige);
 
+<<<<<<< Updated upstream
   h2 {
     font-size: 5rem;
     font-weight: var(--font-weight-bold);
     color: var(--main-color-green);
+=======
+.partners {
+  background-color: var(--main-color-beige);
+  color: var(--main-color-green);
+}
+
+.partners {
+  background-color: var(--main-color-beige);
+  color: var(--main-color-green);
+}
+
+@media (min-width: 768px) {
+  .bieb-blok__container {
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-wrap: wrap;
+>>>>>>> Stashed changes
   }
   p {
     font-size: 1.2rem;
@@ -349,7 +445,27 @@ main {
 
 .over-buurtcampus {
   background-color: var(--main-color-brown);
+<<<<<<< Updated upstream
   padding: 10rem;
+=======
+  color: var(--main-color-beige)
+  
+}
+
+
+
+/* =================== CONTACT =================== */
+/* =================== CONTACT =================== */
+.aanmeld-container {
+  display: flex;
+  flex-direction: column;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+.intro {
+>>>>>>> Stashed changes
   text-align: center;
 
   h2 {
@@ -419,6 +535,40 @@ main {
   }
 }
 
+<<<<<<< Updated upstream
+=======
+
+
+@media (max-width: 600px) {
+  .aanmeld-container {
+    padding: 1.5rem 1rem;
+  }
+
+  .intro h2 {
+    font-size: 1.5rem;
+  }
+}
+
+/* =================== GLOW BUTTON =================== */
+.glow-on-hover {
+  width: 100%;
+  height: 50px;
+  background-color: #ffa500;
+  color: #000;
+  font-weight: bold;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  position: relative;
+  z-index: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+>>>>>>> Stashed changes
 
 
 
@@ -438,7 +588,12 @@ main {
 
 .footer-content {
   display: flex;
+<<<<<<< Updated upstream
   flex-direction: column; /* Op mobiel: secties onder elkaar */
+=======
+  flex-direction: column;
+  flex-direction: column;
+>>>>>>> Stashed changes
   gap: 2rem;
   align-items: flex-start;
   text-align: left;
@@ -446,19 +601,36 @@ main {
 
 @media (min-width: 740px) {
   .footer-content {
+<<<<<<< Updated upstream
     flex-direction: row; /* Op tablet en desktop: secties naast elkaar */
     justify-content: center; /* Centreren van secties */
+=======
+    flex-direction: row;
+    justify-content: center;
+    flex-direction: row;
+    justify-content: center;
+>>>>>>> Stashed changes
     align-items: flex-start;
     text-align: center;
   }
 
   .footer-section {
+<<<<<<< Updated upstream
     flex: 0 0 250px; /* Breedte van elke sectie op tablet en desktop */
+=======
+    flex: 0 0 250px;
+    flex: 0 0 250px;
+>>>>>>> Stashed changes
   }
 }
 
 .footer-section {
+<<<<<<< Updated upstream
   min-width: 200px; /* Minimale breedte van elke sectie */
+=======
+  min-width: 200px;
+  min-width: 200px;
+>>>>>>> Stashed changes
 }
 
 .footer-section h2 {
@@ -477,6 +649,11 @@ main {
 .footer-section address a {
   font-size: 1rem;
   margin: 0.2rem 0;
+<<<<<<< Updated upstream
+=======
+  color: #e9dcbe;
+  color: #e9dcbe;
+>>>>>>> Stashed changes
   text-decoration: none;
   display: block;
 }
@@ -503,3 +680,106 @@ main {
 .footer-section ul li a:hover {
   text-decoration: underline;
 }
+<<<<<<< Updated upstream
+=======
+
+img[loading="lazy"] {
+  opacity: 0;
+  transition: opacity 0.5s ease-in;
+}
+
+img[loading="lazy"].loaded {
+  opacity: 1;
+}
+
+.h2 {
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
+  font-weight: 800;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+
+/* =================== GLOW BUTTON =================== */
+.glow-on-hover {
+  width: 100%;
+  height: 50px;
+  background-color: #ffa500;
+  color: #000;
+  font-weight: bold;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  position: relative;
+  z-index: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.glow-on-hover:before {
+  content: '';
+  background: linear-gradient(45deg, #ffa500, #00ff22, #fffb00, #00d0ff, #ff0073, #002bff, #7a00ff, #ff00c8, #ff0000);
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing 20s linear infinite;
+  opacity: 0;
+  transition: opacity .3s ease-in-out;
+  border-radius: 10px;
+}
+
+.glow-on-hover:hover:before {
+  opacity: 1;
+}
+
+.glow-on-hover:after {
+  z-index: -1;
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #ffa500;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+
+.glow-on-hover:active {
+  color: #000;
+}
+
+.glow-on-hover:active:after {
+  background: transparent;
+}
+
+@keyframes glowing {
+  0% { background-position: 0 0; }
+  50% { background-position: 400% 0; }
+  100% { background-position: 0 0; }
+}
+img[loading="lazy"] {
+  opacity: 0;
+  transition: opacity 0.5s ease-in;
+}
+
+img[loading="lazy"].loaded {
+  opacity: 1;
+}
+
+.h2 {
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
+  font-weight: 800;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+}
+>>>>>>> Stashed changes
