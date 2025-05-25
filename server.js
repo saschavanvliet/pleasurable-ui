@@ -1,6 +1,5 @@
 // Importeer het npm package Express (uit de door npm aangemaakte node_modules map)
 // Deze package is geïnstalleerd via `npm install`, en staat als 'dependency' in package.json
-import express from 'express'
 import express, { response } from 'express'
 import { readFile, writeFile } from 'fs/promises';
 import path from 'path';
@@ -68,7 +67,6 @@ app.get('/agenda', async function (request, response) {
 })
 
 // Prikbord (route)
-// GET-route
 app.get('/project', async function (req, res) {
 
   try {
@@ -93,7 +91,6 @@ app.get('/project', async function (req, res) {
 app.get('/foot', async function (request, response) {
   response.render('foot.liquid')
 })
-
 
 // Contact
 app.get('/contact', async function (request, response) {
