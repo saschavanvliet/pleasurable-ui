@@ -66,7 +66,7 @@ h1, h2 {
 
 /* =================== NAVIGATION =================== */
 nav {
-  color: white;
+  color: var(--text-color-white);
 }
 
 .navbar {
@@ -89,21 +89,6 @@ nav {
   margin-left: 10px;
 }
 
-.menu-toggle {
-  font-size: 1.5rem;
-  background: none;
-  border: none;
-  color: var(--text-light);
-  cursor: pointer;
-  display: block;
-}
-
-@media (min-width: 769px) {
-  .menu-toggle {
-    display: none;
-  }
-}
-
 .nav-links {
   list-style: none;
   display: flex;
@@ -118,13 +103,17 @@ nav {
   transition: max-height 0.3s ease-in-out;
 }
 
-.nav-links.open {
-  max-height: 300px;
+.nav-links li {
+  display: flex;
+  align-items: center; /* verticaal centreren */
+  justify-content: center; /* optioneel: horizontaal centreren */
+  padding: 1rem 0;
 }
 
 .nav-links li {
   text-align: center;
-  padding: 0.5rem 0;
+  padding: 1rem 0;
+  list-style: none;
 }
 
 .nav-links a,
@@ -143,11 +132,13 @@ nav {
 .nav-links details ul {
   display: none;
   background-color: var(--dropdown-bg);
-  padding: 0.5rem;
+  padding: 2rem;
 }
 
 .nav-links details[open] ul {
   display: block;
+  position: absolute;
+  background: #638566;
 }
 
 @media (min-width: 769px) {
@@ -188,7 +179,6 @@ nav {
 .page-header h2 {
   font-size: 2rem;
 }
-
 
 .footer-section address p,
 .footer-section address a {
