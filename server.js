@@ -143,6 +143,34 @@ app.get('/contact', async function (request, response) {
     }
   });
 
+  // POST-route om een project te verwijderen
+  app.post('/delete-project', async (req, res) => {
+    // Haal de ID van het te verwijderen project op uit het formulier
+    const { id } = req.body;
+
+    try {
+      // Lees de bestaande projecten uit het JSON-bestand
+      const file = await readFile(dataPath, 'utf8');
+      const data = JSON.parse(file);
+
+      // Filter de projectenlijst om het project met de opgegeven ID te verwijderen
+      data.projects = data.projects.filter(project => project.id !== parseInt(id));
+
+      // Schrijf de bijgewerkte lijst terug naar het JSON-bestand
+      await writeFile(dataPath, JSON.stringify(data, null, 2));
+
+      // Stuur de gebruiker terug naar de projectpagina met een verwijdermelding
+      res.redirect('/project?state=deleted');
+    } catch (err) {
+      // Log een foutmelding als er iets misgaat
+      console.error('Fout bij verwijderen:', err);
+
+      // Stuur een serverfout terug naar de client
+      res.status(500).send('Server error');
+    }
+  });
+
+
 // Stel het poortnummer in waar Express op moet gaan luisteren
 // Lokaal is dit poort 8000; als deze applicatie ergens gehost wordt, waarschijnlijk poort 80
 app.set('port', process.env.PORT || 8000)
