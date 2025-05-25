@@ -100,6 +100,48 @@ app.get('/contact', async function (request, response) {
   response.render('contact.liquid')
 })
 
+// prikbord post 
+  // POST-route om een nieuw project toe te voegen
+  app.post('/project', async (req, res) => {
+    // Haal de gegevens uit het formulier op
+    const { title, description, name, email } = req.body;
+
+    // Controleer of alle vereiste velden zijn ingevuld
+    if (!title || !description || !name || !email) {
+      // Als een veld ontbreekt, stuur de gebruiker terug met een foutmelding
+      return res.redirect('/project?state=error');
+    }
+
+    // Maak een nieuw projectobject aan met een unieke ID
+    const newProject = {
+      id: Date.now(), // Gebruik de huidige tijd als unieke ID
+      title,
+      description,
+      name,
+      email
+    };
+
+    try {
+      // Lees de bestaande projecten uit het JSON-bestand
+      const file = await readFile(dataPath, 'utf8');
+      const data = JSON.parse(file);
+
+      // Voeg het nieuwe project toe aan de lijst van projecten
+      data.projects.push(newProject);
+
+      // Schrijf de bijgewerkte lijst terug naar het JSON-bestand
+      await writeFile(dataPath, JSON.stringify(data, null, 2));
+
+      // Stuur de gebruiker terug naar de projectpagina met een succesmelding
+      res.redirect('/project?state=success');
+    } catch (err) {
+      // Log een foutmelding als er iets misgaat
+      console.error('Er is iets misgegaan:', err);
+
+      // Stuur een serverfout terug naar de client
+      res.status(500).send('Server error');
+    }
+  });
 
 // Stel het poortnummer in waar Express op moet gaan luisteren
 // Lokaal is dit poort 8000; als deze applicatie ergens gehost wordt, waarschijnlijk poort 80
