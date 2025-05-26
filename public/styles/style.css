@@ -204,7 +204,6 @@ main {
 .intro-stekjes p {
   font-size: 1em;
   max-width: 65ch;
-  text-align: center;
   margin: 0 auto;
 }
 
@@ -261,6 +260,7 @@ margin-top: 300px;
   transition: transform 0.3s ease;
 }
 
+
 .uitleg-stekjes:hover {
   transform: scale(1.03);
 }
@@ -270,7 +270,6 @@ margin-top: 300px;
   margin-left: 0;
   text-align: center;
   font-size: 1em;
-
 }
 
 .kopje-stekjes {
@@ -294,7 +293,7 @@ margin-top: 300px;
   font-size: 18px;
   background-color: var(--main-color-brown);
   color: var(--main-color-beige);
-  padding: 1.5rem 1rem 3rem; /* Kleiner padding bovenaan */
+  padding: 1.5rem 1rem 3rem;
   height: auto;
   width: 90%;
   border-radius: 20px;
@@ -305,9 +304,8 @@ margin-top: 300px;
 }
 
 .kopje-stekje-1 h2 {
-  font-size: 26px;
+  font-size: 20px;
 }
-  
   
   .kopje-stekje-1:hover {
     transform: scale(1.03);
@@ -356,9 +354,77 @@ margin-top: 300px;
   transform: scale(1.05);
 }
 
+@media (min-width: 700px) {
+  
+  .intro-stekjes {
+    font-size: 1.2rem;
+  }
+
+  .uitleg-stekjes h2 {
+    font-size: 2.5rem;
+  }
+
+  .uitleg-stekjes p {
+    font-size: 1rem;
+    text-align: center;
+    margin: 0 auto;
+  }
 
 
+  .harry {
+    width: 500px;
+    height: 500px;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+  }
 
+  .harry-2 {
+    width: 300px;
+    height: 300px;
+  }
+
+
+  .uitleg-stekjes {
+    font-size: 16px;
+  }
+
+  .kopje-stekje-1 h2{
+    font-size: 2.5rem;
+  }
+
+}
+@media (min-width: 1000px) {
+  .intro-stekjes {
+    font-size: 1.5rem;
+  }
+
+  .uitleg-stekjes h2 {
+    font-size: 3rem;
+  }
+
+  .uitleg-stekjes p {
+    font-size: 1.5rem;
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  .harry {
+    width: 500px;
+    height: 500px;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+  }
+
+  .uitleg-stekjes {
+    font-size: 18px;
+  }
+
+  .kopje-stekje-1 h2{
+    font-size: 3rem;
+  }
+}
 /* =================== BIEB BLOK =================== */
 .bieb-blok {
   padding: clamp(1.5rem, 2vw, 3rem) 1rem;
