@@ -180,9 +180,7 @@ h1, h2 {
     font-size: 1.1rem;
     padding: 0.5rem;
   }
-<<<<<<< Updated upstream
 
-<<<<<<< Updated upstream
 .nav-links a:hover,
 .nav-links details summary:hover {
   border-radius: 20px 0;
@@ -195,19 +193,12 @@ h1, h2 {
   opacity: 90%;
   border-radius: 0 30px;
 }
-=======
-=======
 
->>>>>>> Stashed changes
   .nav-links details ul {
     display: none;
     background-color: var(--dropdown-bg);
     padding: 2rem;
   }
-<<<<<<< Updated upstream
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
 
   .nav-links details[open] ul {
     display: block;
