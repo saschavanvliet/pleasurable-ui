@@ -1,86 +1,83 @@
 {% render 'partials/head.liquid' %}
 {% render 'partials/nav.liquid' %}
 
-<section class="intro">
-    <h1>Samen Groener Leven</h1>
-    <p>Inspireer & Deel je Groene Passie! </p>
-</section>
-<header>
-
 <main>
-    <section class="projecten">
-        <article class="stekjes-bieb">
-            <h2>Onze Stekjes Bieb!</h2>
-            <p>Ons eerste Bieb in Bloei project is de stekjeskast gemaakt door 
-                kinderen uit de buurt bij de Maakplaats van OBA Javaplein. Twee 
-                jaar geleden brachten zij deze kast naar OBA Linnaeus waar hij 
-                sindsdien goed gebruikt wordt door buurtbewoners. Op onze stekjespagina 
-                staat een overzicht van de meest geruilde stekjes die vaak in de kast te 
-                vinden zijn. Kom vooral een kijkje nemen want soms brengen buurtbewoners 
-                heel bijzondere stekjes! Neem je eigen stekje mee van thuis om deze te ruilen. 
-            </p>
-            <button>Bekijk de Stekjess</button>
-            <img src="link" alt="Stekjes Bieb" />
-        </article>
+  <header class="page-header">
+    <h1>Samen Groener Leven</h1>
+    <h2>Inspireer & Deel je Groene Passie!</h2>
+  </header>
 
-        <article class="zaden-bieb">
-            <h2>Onze Zaden Bieb</h2>
-            <p>Ons tweede Bieb in Bloei project is de Zadenbieb. Deze kast is ook gemaakt door 
-                kinderen van de Maakplaats bij OBA Javaplein onder leiding van Roel Pothoven. In
-                deze kast kun je zaden voor je moestuin, tuin of balkon ruilen. Buurtbewoners en
-                buurttuinen hebben na het zaaiseizoen soms zaden over die beperkt houdbaar zijn.
-            </p>
-            <p>
-                Door ze in de kast te delen zorgen we ervoor dat de zaden die anders
-                verloren gaan gebruikt kunnen worden om de stad te vergroenen. Roel: “We hebben 
-                tijdens het maken van de kast super veel geleerd samen met de kinderen over houtbewerking
-                en natuurlijk over zaden, natuur en plantjes. Als je de laatjes opentrekt zie je wat de 
-                kinderen hebben gemaakt”.
-            </p>
-            <button>bekijk de zaden </button>
-            <img src="link" alt="Zaden Bieb" />
-        </article>
+<!-- Stekjes Bieb -->
+<section class="bieb-blok stekjes-bieb">
+  <div class="bieb-blok__container">
+    <div class="bieb-blok__text">
+      <h2>Onze Stekjes Bieb!</h2>
+      <p>Bij Buurtcampus Oost kun je de stekjeskast bezoeken om stekjes te ruilen, je kunt ook op onze website inzien welke stekjes beschikbaar zijn. Dit is een geweldige manier voor plantenliefhebbers om met elkaar in contact te komen en planten te delen. 
+      Het maakt het gemakkelijk om je favoriete stekjes te vinden en te ruilen met anderen in de buurt, zonder gedoe. Kom langs bij Buurtcampus Oost en ontmoet mede-plantenliefhebbers!</p>
+    </div>
+    <figure class="bieb-blok__image">
+      <picture>
+        <source srcset="/assets/home-background.avif" type="image/avif">
+        <source srcset="/assets/home-background.webp" type="image/webp">
+        <img class="image-border-orange" src="/assets/home-background.avif" alt="Afbeelding van de Stekjes Bieb" loading="lazy">
+      </picture>
+    </figure>
+  </div>
+</section>
 
-        <article class="geveltuin">
-            <h2>Onze Gevel tuin </h2>
-            <p>Ons derde Bieb in Bloei project is de geveltuin aan de voorkant van OBA Linnaeus;
-                in 2022 aangevraagd door de inmiddels afgestudeerde Bestuurskunde student Mert.
-                 Sindsdien organiseren onze vaste studenten elk jaar in maart een Zaaifeest, 
-                 om het begin van de lente te vieren met de buurt.
-            </p>
-            <p>
-                Daarna start het Bakkie buiten de Bieb seizoen, waarin studenten elke week in 
-                de geveltuin werken onder het genot van een hapje en drankje. Woon je vlakbij
-                en lijkt het je leuk om mee te helpen, houd dan deze website in de gaten voor 
-                de nog te bepalen dag en tijd..
-            </p>
-            <button>bekijk de tuin </button>
-            <img src="link" alt="geveltuin" />
-        </article>
-    </section>
+<!-- Zaden Bieb -->
+<section class="bieb-blok zaden-bieb">
+  <div class="bieb-blok__container reverse">
+    <div class="bieb-blok__text">
+      <h2>Onze Zaden Bieb</h2>
+      <p>Bij Buurtcampus Oost kun je de zadenkast bezoeken om zaadjes te kunnen ruilen, je kunt ook op onze website inzien welke stekjes beschikbaar zijn. Dit is een geweldige manier voor plantenliefhebbers om met elkaar in contact te komen en planten te delen. 
+      Het maakt het gemakkelijk om je favoriete stekjes te vinden en te ruilen met anderen in de buurt, zonder gedoe. Kom langs bij Buurtcampus Oost en ontmoet mede-plantenliefhebbers!</p>
+    </div>
+    <figure class="bieb-blok__image">
+      <picture>
+        <source srcset="/assets/home-background.avif" type="image/avif">
+        <source srcset="/assets/home-background.webp" type="image/webp">
+        <img class="image-border-green" src="/assets/home-background.avif" alt="Afbeelding van de Zaden Bieb" loading="lazy">
+      </picture>
+    </figure>
+  </div>
+</section>
 
-    <article class="over-buurtcampus">
-        <h2>Over Buurtcampus <span>Oost</span></h2>
-        <p>De Buurtcampus is een leeromgeving opgezet door de Hogeschool van Amsterdam (HvA) 
-            in samenwerking met de Openbare Bibliotheek van Amsterdam (OBA). Met drie Buurtcampussen 
-            in verschillende stadsdelen richten wij ons op actuele uitdagingen in de wijken van Amsterdam. 
-            De Buurtcampus heeft vestigingen in OBA Geuzenveld (Nieuw-West), OBA Linnaeus (Oost) en 
-            OBA Ganzenhoef (Zuidoost).
-        </p>
-        <p>Dit zijn toegankelijke plekken waar studenten projecten en buurtactiviteiten ontwikkelen
-            en uitvoeren, en waar onderzoekers aansluiting vinden bij hun wijkgerichte vragen. Hier 
-            ontmoeten de HvA en de wijk elkaar om opgedane kennis in de praktijk te brengen en buurten 
-            inclusiever, veiliger, gezonder, groener en socialer te maken.
-        </p>
-    </article>
+<!-- Geveltuin -->
+<section class="bieb-blok geveltuin">
+  <div class="bieb-blok__container">
+    <div class="bieb-blok__text">
+      <h2>Onze Gevel Tuinen</h2>
+      <p>Bij Buurtcampus Oost kan je deelnemen aan de geveltuin projecten. Het geveltuinproject is een geweldige manier om je steentje bij te dragen aan een mooier, groener en socialer Amsterdam. Of je nu een ervaren tuinier bent of nog nooit met een plant hebt gewerkt, er is altijd een plek voor je in ons team. 
+      We leren je alles wat je moet weten en zorgen voor de benodigde materialen.
+      Meld je aan vandaag nog!</p>
+    </div>
+    <figure class="bieb-blok__image">
+      <picture>
+        <source srcset="/assets/home-background.avif" type="image/avif">
+        <source srcset="/assets/home-background.webp" type="image/webp">
+        <img class="image-border-orange" src="/assets/home-background.avif" alt="Afbeelding van een Geveltuin" loading="lazy">
+      </picture>
+    </figure>
+  </div>
+</section>
 
-    <article class="partners">
+
+  <!-- Buurtcampus Oost -->
+  <section class="buurtcampus">
+    <h2>Buurtcampus Oost</h2>
+    <p>Bieb & Bloei is een bruisende samenwerking tussen HvA en OBA.</p>
+    <p>Het is meer dan een initiatief, het is een dynamische beweging voor een groenere stad.</p>
+  </section>
+
+  <!-- Partners -->
+  <section class="partners">
     <h2>Partners</h2>
-    <p>Bieb & Bloei: Een bruisende samenwerking tussen HvA en OBA</p>
+    <p>Bieb & Bloei is een bruisende samenwerking tussen HvA en OBA.</p>
+    <p>Het is meer dan een initiatief, het is een dynamische beweging voor een groenere stad.</p>
+  </section>
+</main>
 
-    <p>Bieb & Bloei is meer dan een initiatief, het is een dynamische 
-        samenwerking tussen de Hogeschool van Amsterdam (HvA) en de Openbare 
-        Bibliotheek Amsterdam (OBA). 
-    </p>
 
-    {% render 'partials/foot.liquid' %}
+  {% render 'partials/foot.liquid' %}
+

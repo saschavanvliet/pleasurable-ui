@@ -1,6 +1,42 @@
-{% render 'partials/head.liquid', title: 'Contact' %}
-
+{% render 'partials/head.liquid' %}
 {% render 'partials/nav.liquid' %}
+
+<main>
+  <header class="page-header">
+    <h1>Contact</h1>
+  </header>
+
+
+  <main class="aanmeld-container">
+  <section class="intro">
+    <h2><span>Meld je</span> <span class="accent">aan</span><span class="accent-punct"> !</span></h2>
+    <p>
+      Ben jij net als ons ook zo gek van planten, biodiversiteit, natuur en gezondheid? 
+      En heb je een vraag, verzoek, opmerking, compliment of wil je je aanmelden voor een van onze workshops, 
+      events of activiteiten? Vul dan het formulier hieronder in:
+    </p>
+  </section>
+
+  <section class="form-section">
+    <form method="post" action="/aanmelden">
+      <label for="naam">Naam</label>
+      <input type="text" id="naam" name="naam" required>
+
+      <label for="achternaam">Achternaam</label>
+      <input type="text" id="achternaam" name="achternaam">
+
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="beschrijving">Beschrijving</label>
+      <textarea id="beschrijving" name="beschrijving" required></textarea>
+
+      <button type="submit">Verzenden</button>
+    </form>
+  </section>
+</main>
+
+  
 
 
 {% render 'partials/foot.liquid' %}
