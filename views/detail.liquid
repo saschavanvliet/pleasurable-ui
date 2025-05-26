@@ -2,11 +2,11 @@
 
 <main class="main-stekje">
 <section class="stekje-info">
-  <a href="/stekjes" class="terugknop">terug</a>
+  <a href="/stekjes" class="terug-stekjes">terug</a>
   <section class="stekje-description">
     <h2>{{ stekje.naam }}</h2>
     <p>{{ stekje.beschrijving }}</p>
-    <img src="https://fdnd-agency.directus.app/assets/{{ stekje.foto }}" alt="{{ stekje.naam }}">
+    <img src="https://fdnd-agency.directus.app/assets/{{ stekje.foto }}" alt="{{ stekje.naam }}" loading="lazy">
   </section>
   <section class="stekje-kenmerken">
 

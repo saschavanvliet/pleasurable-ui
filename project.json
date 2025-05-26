@@ -1,0 +1,25 @@
+{
+  "projects": [
+    {
+      "id": 1747963173775,
+      "title": "Groenere speeltuinen",
+      "description": "Veel speeltuinen bestaan uit beton en rubber. Wat als we ze omtoveren tot groene speelplekken met klimbomen, natuurlijke speelelementen en schaduwrijke plekjes? Dit stimuleert niet alleen de fantasie van kinderen, maar draagt ook bij aan een koelere stad.",
+      "name": "Emma ",
+      "email": "emmaiscool@gmail.com"
+    },
+    {
+      "id": 1747963317874,
+      "title": "Ruilmarkt",
+      "description": "Een wekelijkse ruilmarkt waar bewoners van Amsterdam-Oost spullen zoals kleding, speelgoed en huishoudelijke artikelen kunnen ruilen in plaats van kopen. Het draait om het bevorderen van duurzaamheid en de circulaire economie. Bij deze markt worden ook workshops gehouden over het upcyclen van materialen en het herstellen van kleding, zodat mensen niet alleen spullen ruilen, maar ook leren hoe ze hun bezittingen een tweede leven kunnen geven.",
+      "name": "Luca Janssen",
+      "email": "LucaJanssen@outlook.com"
+    },
+    {
+      "id": 1747963364990,
+      "title": "Groene Verbinding",
+      "description": "Een community garden in Osdorp waar buurtbewoners gezamenlijk groenten, fruit en kruiden verbouwen. Deze tuin fungeert als ontmoetingsplek en versterkt de sociale cohesie in de wijk",
+      "name": "Aisha van Dijk",
+      "email": "aishavandijk@gmail.com"
+    }
+  ]
+}
