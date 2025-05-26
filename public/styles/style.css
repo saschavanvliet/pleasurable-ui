@@ -610,6 +610,7 @@ margin-top: 300px;
   color: var(--card-color-green);
 }
 
+
 /* Tablet */
 @media (min-width: 768px) {
   .bieb-blok__container {
