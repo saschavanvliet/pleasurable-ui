@@ -1,5 +1,3 @@
-
-
 /* =================== BASE STYLES =================== */
 * {
   font-family: 'Poppins', sans-serif;
@@ -446,9 +444,6 @@ body {
     font-size: 1.5rem;
   }
 }
-
-
-  
   
 /* =================== FOOTER =================== */
 .footer {
@@ -526,3 +521,13 @@ body {
   text-decoration: underline;
 }
 
+/* =================== Lazy animatie =================== */
+
+img[loading="lazy"] {
+  opacity: 0;
+  transition: opacity 0.5s ease-in;
+}
+
+img[loading="lazy"].loaded {
+  opacity: 1;
+}
