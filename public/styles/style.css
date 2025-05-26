@@ -251,9 +251,9 @@ h1 {
   background-color: var(--background-color);
 }
 
-.terugknop{
+.terug-stekjes {
   text-decoration: none;
-  font-family: poppins, sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-weight: var(--font-weight-bold);
   background-color: var(--main-color-beige);
   color: var(--main-color-brown);
@@ -261,9 +261,12 @@ h1 {
   border: solid 2px var(--main-color-brown);
   border-radius: 30px;
   max-width: 100px;
+  display: inline-block;
+  text-align: center; 
+  height: 50px; 
 }
 
-.terugknop:hover {
+.terug-stekjes:hover {
   background-color: var(--main-color-brown);
   color: var(--main-color-beige);
   transition: background-color 0.3s ease;
@@ -294,11 +297,11 @@ h1 {
 }
 
 .stekje-description img {
-  width: 70%;
-  max-width: 70%;
+  width: 40%;
+  max-width: 40%;
   border-radius: 15px;
   margin-top: 1.5rem;
-  box-shadow: 40px 8px 15px #F4CA8B;
+  box-shadow: 20px 8px 15px  #F4CA8B;
   transition: transform 0.3s ease;
   align-items: center;
   display: block;
@@ -360,12 +363,10 @@ h1 {
 }
 
 .stekje-details[open] .stekje-summary::after {
-  content: " -";
+  content: "-";
 }
 
-/* DETAILPAGINA DESKTOP*/
-
-@media (min-width: 768px) {
+@media (min-width: 1200px) {
   .stekje-info {
     flex-direction: row;
     padding: 60px;
@@ -389,13 +390,13 @@ h1 {
     max-width: 250px;
     margin-top: 5rem;
     border-radius: 30px;
-    box-shadow: 150px 20px 30px #F4CA8B;
     margin-left: 0;
-
   }
 
   .stekje-kenmerken {
+    min-width: 300px;
     width: 1500px;
+
   }
 
   .stekje-details {
@@ -410,8 +411,6 @@ h1 {
 /* =================== BIEB BLOK =================== */
 .bieb-blok {
   padding: clamp(1.5rem, 2vw, 3rem) 1rem;
-
-
 }
 
 .bieb-blok__container {
