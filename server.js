@@ -195,6 +195,11 @@ app.get('/expiriment', async function (request, response) {
   response.render('expiriment.liquid')
 })
 
+// expiriment
+app.get('/404', async function (request, response) {
+  response.render('404.liquid')
+})
+
 // Stel het poortnummer in waar Express op moet luisteren
 app.set('port', process.env.PORT || 8000)
 

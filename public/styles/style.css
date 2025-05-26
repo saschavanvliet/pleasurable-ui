@@ -1049,3 +1049,89 @@ img[loading="lazy"] {
 img[loading="lazy"].loaded {
   opacity: 1;
 }
+
+
+/* styling 404 pagina */
+ 
+.body-404 {
+  background-color:(--main-color-brown);
+}
+
+.header-404 {
+  margin-top: 100px;
+}
+
+.header-404 h1 {
+  font-family: 'poppins-black', sans-serif;
+  color: #FAE9C3;
+  font-size: clamp(1rem, 4vw, 4rem); 
+  margin-top: 4rem;
+  text-align: center;
+}
+
+
+.section-404 {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--main-color-beige);
+  margin-top: 2rem;
+  box-sizing: border-box;
+  width: 80%;
+  height: 600px;
+  padding: 2rem;
+  border: 5px solid var(--card-color-green);
+  border-radius: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 100px;
+
+  a {
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    font-weight: var(--font-weight-bold);
+    background-color: var(--main-color-beige);
+    color: var(--main-color-brown);
+    padding: clamp(0.5rem, 2vw, 0.75rem) clamp(1rem, 4vw, 2rem);
+    font-size: clamp(0.9rem, 2vw, 1.2rem);
+    border: 2px solid var(--main-color-brown);
+    border-radius: 30px;
+    display: inline-block;
+    text-align: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  a:hover {
+    background-color: var(--main-color-brown);
+    color: var(--main-color-beige);
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  }
+  
+}
+
+.section-404  h2 {
+  font-family: 'poppins-black', sans-serif;
+  color: var(--text-color-brown);
+  text-align: center;
+  font-size: 2rem;
+}
+
+.section-404 img {
+  width: 300px;
+  height: 350px;
+  padding: 10px;
+  margin-top: 20px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  animation: twerk 0.3s infinite;
+}
+
+@keyframes twerk {
+  0% { transform: rotate(0deg) translateY(0); }
+  25% { transform: rotate(10deg) translateY(-5px); }
+  50% { transform: rotate(0deg) translateY(0); }
+  75% { transform: rotate(-10deg) translateY(-5px); }
+  100% { transform: rotate(0deg) translateY(0); }
+}
