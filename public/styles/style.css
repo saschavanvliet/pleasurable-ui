@@ -68,21 +68,14 @@ h1, h2 {
 .logo-container {
   display: flex;
   align-items: center;
-}
-
-.logo-container {
   display: inline-block;
   transition: transform 0.5s ease; 
+  height: auto;
+  margin-left: 0.8em;
 }
 
 .logo-container:hover {
   transform: rotateX(180deg); 
-}
-
-.logo {
-  width: 50px;
-  height: auto;
-  margin-left: 10px;
 }
 
 .navbar {
@@ -109,11 +102,11 @@ h1, h2 {
 .nav-links details summary {
   display: block;
   width: 100%;
-  padding: 1rem;
   text-decoration: none;
   color: inherit; 
   background: transparent;
   border: none;
+  padding: 0.7em;
 }
 
 .nav-links a:hover,
@@ -124,7 +117,6 @@ h1, h2 {
 .nav-links a:hover {
   color: var(--card-color-orange);
 }
-
 
 .nav-links details ul {
   padding-left: 1.5rem; 
@@ -138,7 +130,7 @@ h1, h2 {
 }
 
 .nav-links details[open] summary {
-  list-style: disclosure-open; /* marker wijst omlaag */
+  list-style: disclosure-open; 
 }
 
 .nav-links details summary:hover {
@@ -189,10 +181,17 @@ nav {
   padding: 0.5rem;
 }
 
+.nav-links a:hover,
+.nav-links details summary:hover {
+  border-radius: 20px 0;
+}
+
 .nav-links details ul {
   display: none;
   background-color: var(--dropdown-bg);
   padding: 2rem;
+  opacity: 90%;
+  border-radius: 0 30px;
 }
 
 .nav-links details[open] ul {
@@ -201,6 +200,7 @@ nav {
   background: #638566;
 }}
 
+/* Footer & header */
 .page-header {
   background: url("../assets/home-background.png") center/cover no-repeat;
   display: flex;
@@ -231,7 +231,6 @@ nav {
   color: #e9dcbe;
   text-decoration: none;
   display: block;
-
 }
 
 /* =================== STEKJES BIEB =================== */
@@ -241,8 +240,6 @@ nav {
 
 
 }
-
-
 
 .bieb-blok__container {
   display: flex;
