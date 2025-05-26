@@ -37,9 +37,11 @@
     <section class="carousel-wrapper">
         <ul class="carousel">
             {% for afbeelding in afbeeldingengeveltuin %}
-            <li>
-                <img src="https://fdnd-agency.directus.app/assets/{{ afbeelding.foto }}" alt="Geveltuin afbeelding" width="400px">
-            </li>
+                <li>
+                <picture>
+                    <img src="https://fdnd-agency.directus.app/assets/{{ afbeelding.foto }}" alt="Geveltuin afbeelding" width="400px" loading="lazy" class="fade-in-geveltuinafbeelding">
+                </picture>
+                </li>
             {% endfor %}
         </ul>
     </section>  
