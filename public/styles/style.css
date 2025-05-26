@@ -258,7 +258,7 @@ nav {
   max-width: 40%;
   border-radius: 15px;
   margin-top: 1.5rem;
-  box-shadow: 40px 8px 15px #F4CA8B;
+  box-shadow: 20px 8px 15px  #F4CA8B;
   transition: transform 0.3s ease;
   align-items: center;
   display: block;
@@ -347,13 +347,13 @@ nav {
     max-width: 250px;
     margin-top: 5rem;
     border-radius: 30px;
-    box-shadow: 150px 20px 30px #F4CA8B;
     margin-left: 0;
   }
 
   .stekje-kenmerken {
     min-width: 300px;
     width: 1500px;
+
   }
 
   .stekje-details {
