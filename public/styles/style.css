@@ -138,49 +138,50 @@ h1, h2 {
 }
 
 @media (min-width: 768px) {
-nav {
-  color: var(--text-color-white);
-}
+  nav {
+    color: var(--text-color-white);
+  }
 
-.navbar {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 1rem 2rem;
-  flex-wrap: wrap;
-}
+  .navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    flex-wrap: wrap;
+  }
 
-.nav-links {
-  list-style: none;
-  display: flex;
-  flex-direction: row;
-  position: static;
-  top: 60px;
-  right: 0;
-  width: auto;
-  max-height: none;
-  overflow: hidden;
-  gap: 1.5rem;
-  transition: max-height 0.3s ease-in-out;
-}
+  .nav-links {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    position: static;
+    top: 60px;
+    right: 0;
+    width: auto;
+    max-height: none;
+    overflow: hidden;
+    gap: 1.5rem;
+    transition: max-height 0.3s ease-in-out;
+  }
 
-.nav-links li {
-  display: flex;
-  align-items: center; 
-  justify-content: center; 
-  padding: 0;
-  list-style: none;
-  text-align: left;
-}
+  .nav-links li {
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+    padding: 0;
+    list-style: none;
+    text-align: left;
+  }
 
-.nav-links a,
-.nav-links details summary {
-  color: var(--text-light);
-  text-decoration: none;
-  font-size: 1.1rem;
-  padding: 0.5rem;
-}
+  .nav-links a,
+  .nav-links details summary {
+    color: var(--text-light);
+    text-decoration: none;
+    font-size: 1.1rem;
+    padding: 0.5rem;
+  }
 
+<<<<<<< Updated upstream
 .nav-links a:hover,
 .nav-links details summary:hover {
   border-radius: 20px 0;
@@ -193,11 +194,18 @@ nav {
   opacity: 90%;
   border-radius: 0 30px;
 }
+=======
+  .nav-links details ul {
+    display: none;
+    background-color: var(--dropdown-bg);
+    padding: 2rem;
+  }
+>>>>>>> Stashed changes
 
-.nav-links details[open] ul {
-  display: block;
-  position: absolute;
-  background: #638566;
+  .nav-links details[open] ul {
+    display: block;
+    position: absolute;
+    background: #638566;
 }}
 
 /* Footer & header */
@@ -256,8 +264,6 @@ nav {
   padding: 0 1rem;
 }
 
-
-
 .bieb-blok__image {
   width: 100%;
   max-width: 600px;
@@ -269,8 +275,6 @@ nav {
   border-radius: 12px;
   border: 4px solid transparent;
 }
-
-
 
 /* Blok specifieke kleuren */
 .stekjes-bieb {
