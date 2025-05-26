@@ -319,6 +319,7 @@ main {
   }
 
 }
+
 .geveltuin {
   box-sizing: border-box;
   border: 1px solid var(--main-color-green);
@@ -412,7 +413,61 @@ main {
   }
 }
 
+/* Geveltuin */
 
+.introtext-geveltuin {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--card-color-green);
+  text-align: center;
+  min-height: 50vh; 
+  padding: 2rem;
+  background-color: var(--bg-light); 
+  margin: 3em;
+  font-weight: var(--font-weight-bold);
+  @media (min-width: 740px) {
+    margin: 6em;
+}}
+
+.header-geveltuin {
+  color: var(--text-color-white);
+  background: var(--main-color-beige);
+  display: flex;
+  justify-content: center;  
+  align-items: center;      
+  text-align: center;    
+  height: 50vh;            
+  padding: 2rem;            
+}
+
+.fotos-geveltuin {
+  overflow: hidden;
+  padding: 2rem 0;
+}
+
+.fotos-geveltuin ul {
+  display: flex;
+  gap: 1rem;
+  overflow-x: auto;
+  padding: 1rem;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  list-style: none;
+}
+
+.fotos-geveltuin li {
+  flex: 0 0 auto;
+  scroll-snap-align: center;
+}
+
+.fotos-geveltuin img {
+  width: 300px; /* pas dit aan zoals gewenst */
+  height: auto;
+  border-radius: 1rem;
+  object-fit: cover;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
 
 
 

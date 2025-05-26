@@ -1,19 +1,30 @@
 {% render 'partials/head.liquid', title: 'Geveltuin' %}
 {% render 'partials/nav.liquid', title: 'Geveltuin' %}
 
+<header class="header-geveltuin">
+    <h1>Geveltuin</h1>
+</header>
+
 <main>
-
-  {% for tekstje in contentgeveltuin %}
-    <p>{{ tekstje.text }}</p>
-  {% endfor %}
-
-  <ul>
-    {% for afbeelding in afbeeldingengeveltuin %}
-      <li>
-        <img src="https://fdnd-agency.directus.app/assets/{{ afbeelding.foto }}" alt="Geveltuin afbeelding" width="400px">
-      </li>
-    {% endfor %}
-  </ul>
+    <section class="achtergrondfoto-geveltuin">
+        <img src="../public/assets/IMG_20240327_170144.jpg">
+    </section>
+   
+    <section class="introtext-geveltuin">
+      {% for tekstje in contentgeveltuin %}
+        <p>{{ tekstje.text }}</p>
+      {% endfor %}
+    </section>
+    
+    <section class="foto's-geveltuin">
+        <ul>
+            {% for afbeelding in afbeeldingengeveltuin %}
+            <li>
+                <img src="https://fdnd-agency.directus.app/assets/{{ afbeelding.foto }}" alt="Geveltuin afbeelding" width="400px">
+            </li>
+            {% endfor %}
+        </ul>
+    </section>
 </main>
 
 
