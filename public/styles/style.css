@@ -51,6 +51,7 @@ h1, h2 {
   width: 100%;
   padding: 0;
   margin: 0;
+  font-weight: var(--font-weight-bold);
 }
 
 .nav-links li {
@@ -123,7 +124,6 @@ h1, h2 {
     overflow: hidden;
     gap: 1.5rem;
     transition: max-height 0.3s ease-in-out;
-    font-weight: var(--font-weight-bold);
   }
 
   .nav-links li {
