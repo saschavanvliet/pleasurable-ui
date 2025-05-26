@@ -415,60 +415,115 @@ main {
 
 /* Geveltuin */
 
-.introtext-geveltuin {
+.header-geveltuin {
+  background: url("../assets/home-background.png") center/cover no-repeat;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  color: var(--card-color-green);
-  text-align: center;
-  min-height: 50vh; 
-  padding: 2rem;
-  background-color: var(--bg-light); 
-  margin: 3em;
-  font-weight: var(--font-weight-bold);
-  @media (min-width: 740px) {
-    margin: 6em;
-}}
+  height: 90vh;
+  color: var(--text-color-white);
+}
 
-.header-geveltuin {
+/* .header-geveltuin {
   color: var(--text-color-white);
   background: var(--main-color-beige);
   display: flex;
   justify-content: center;  
   align-items: center;      
   text-align: center;    
-  height: 50vh;            
+  height: 70vh;            
   padding: 2rem;            
+} */
+
+.main-geveltuin p {
+  margin-left: 2em;
+  margin-right: 2em;
 }
 
-.fotos-geveltuin {
-  overflow: hidden;
-  padding: 2rem 0;
+.introtext-geveltuin {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--card-color-green);
+  text-align: center;
+  z-index: 2;
+  position: absolute;
+  min-height: 50vh; 
+  padding: 2rem;
+  background-color: var(--bg-light); 
+  margin: 3em;
+  font-weight: var(--font-weight-bold);
+  transform: translateY(-38rem);
+  padding: 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  background: var(--main-color-beige);
+  @media (min-width: 740px) {
+    margin: 6em;
+}}
+
+.geveltuin-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  align-items: flex-start;
+  margin-block: 2rem;
 }
 
-.fotos-geveltuin ul {
+.meedoen-geveltuin {
+  background: var(--main-color-brown);
+  color: var(--text-color-beige);
+  padding-top: 15em;
+  padding-bottom: 7em;
+  flex: 2;
+  width: 100%;
+}
+
+.highlight {
+  color: var(--main-color-orange);
+}
+
+.highlight2 {
+  color: var(--main-color-green); 
+}
+
+.fotos-geveltuin h1 {
+  color: var(--text-color-brown);
+  padding-top: 1em;
+}
+
+.carousel-wrapper {
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding-bottom: 1rem;
+}
+
+.carousel {
   display: flex;
   gap: 1rem;
-  overflow-x: auto;
-  padding: 1rem;
-  scroll-snap-type: x mandatory;
-  -webkit-overflow-scrolling: touch;
   list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
-.fotos-geveltuin li {
-  flex: 0 0 auto;
-  scroll-snap-align: center;
+.carousel-item {
+  flex: 0 0 auto; 
+  scroll-snap-align: start;
 }
 
-.fotos-geveltuin img {
-  width: 300px; /* pas dit aan zoals gewenst */
-  height: auto;
-  border-radius: 1rem;
-  object-fit: cover;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+.carousel-wrapper::-webkit-scrollbar {
+  height: 8px;
 }
 
+.carousel-wrapper::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 4px;
+}
+
+.carousel-wrapper {
+  margin-bottom: 2em;
+}
 
 
 
