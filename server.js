@@ -1,11 +1,27 @@
+
+// Importeer het npm package Express (uit de door npm aangemaakte node_modules map)
+// Deze package is geïnstalleerd via `npm install`, en staat als 'dependency' in package.json
+import express, { response } from 'express'
+import { readFile, writeFile } from 'fs/promises';
+import path from 'path';
+
 // Importeer het npm package Express
-import express from 'express'
 
 // Importeer de Liquid package
 import { Liquid } from 'liquidjs'
 
 // Maak een nieuwe Express applicatie aan
 const app = express()
+
+// Maak werken met data uit formulieren iets prettiger
+app.use(express.urlencoded({extended: true}))
+app.use(express.json())
+
+const dataPath = path.join('./project.json');
+
+// Gebruik de map 'public' voor statische bestanden (resources zoals CSS, JavaScript, afbeeldingen en fonts)
+// Bestanden in deze map kunnen dus door de browser gebruikt worden
+app.use(express.static('public'))
 
 // Stel Liquid in als 'view engine'
 const engine = new Liquid()
@@ -72,10 +88,26 @@ app.get('/agenda', async function (request, response) {
   response.render('agenda.liquid')
 })
 
-// Partners
-app.get('/partners', async function (request, response) {
-  response.render('partners.liquid')
-})
+// Prikbord (route)
+app.get('/project', async function (req, res) {
+
+  try {
+    // Lees de inhoud van het JSON-bestand waarin projecten worden opgeslagen
+    const file = await readFile(dataPath, 'utf8');
+    
+    // Parse de JSON-inhoud van het bestand naar een JavaScript-object
+    const data = JSON.parse(file);
+    
+    // Render de 'project.liquid' template en geef de projecten door als data
+    res.render('project.liquid', { projects: data.projects });
+  } catch (err) {
+    // Log een foutmelding als er iets misgaat bij het lezen of parsen van het bestand
+    console.error('Er is iets mis gegaan:', err);
+    
+    // Stuur een serverfout terug naar de client
+    res.status(500).send('Server error');
+  }
+});
 
 // Foot
 app.get('/foot', async function (request, response) {
@@ -86,6 +118,77 @@ app.get('/foot', async function (request, response) {
 app.get('/contact', async function (request, response) {
   response.render('contact.liquid')
 })
+
+
+// prikbord post 
+  // POST-route om een nieuw project toe te voegen
+  app.post('/project', async (req, res) => {
+    // Haal de gegevens uit het formulier op
+    const { title, description, name, email } = req.body;
+
+    // Controleer of alle vereiste velden zijn ingevuld
+    if (!title || !description || !name || !email) {
+      // Als een veld ontbreekt, stuur de gebruiker terug met een foutmelding
+      return res.redirect('/project?state=error');
+    }
+
+    // Maak een nieuw projectobject aan met een unieke ID
+    const newProject = {
+      id: Date.now(), // Gebruik de huidige tijd als unieke ID
+      title,
+      description,
+      name,
+      email
+    };
+
+    try {
+      // Lees de bestaande projecten uit het JSON-bestand
+      const file = await readFile(dataPath, 'utf8');
+      const data = JSON.parse(file);
+
+      // Voeg het nieuwe project toe aan de lijst van projecten
+      data.projects.push(newProject);
+
+      // Schrijf de bijgewerkte lijst terug naar het JSON-bestand
+      await writeFile(dataPath, JSON.stringify(data, null, 2));
+
+      // Stuur de gebruiker terug naar de projectpagina met een succesmelding
+      res.redirect('/project?state=success');
+    } catch (err) {
+      // Log een foutmelding als er iets misgaat
+      console.error('Er is iets misgegaan:', err);
+
+      // Stuur een serverfout terug naar de client
+      res.status(500).send('Server error');
+    }
+  });
+
+  // POST-route om een project te verwijderen
+  app.post('/delete-project', async (req, res) => {
+    // Haal de ID van het te verwijderen project op uit het formulier
+    const { id } = req.body;
+
+    try {
+      // Lees de bestaande projecten uit het JSON-bestand
+      const file = await readFile(dataPath, 'utf8');
+      const data = JSON.parse(file);
+
+      // Filter de projectenlijst om het project met de opgegeven ID te verwijderen
+      data.projects = data.projects.filter(project => project.id !== parseInt(id));
+
+      // Schrijf de bijgewerkte lijst terug naar het JSON-bestand
+      await writeFile(dataPath, JSON.stringify(data, null, 2));
+
+      // Stuur de gebruiker terug naar de projectpagina met een verwijdermelding
+      res.redirect('/project?state=deleted');
+    } catch (err) {
+      // Log een foutmelding als er iets misgaat
+      console.error('Fout bij verwijderen:', err);
+
+      // Stuur een serverfout terug naar de client
+      res.status(500).send('Server error');
+    }
+  });
 
 // expiriment
 app.get('/expiriment', async function (request, response) {
