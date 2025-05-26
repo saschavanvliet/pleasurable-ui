@@ -201,11 +201,6 @@ nav {
 }
 
 /* =================== STEKJES BIEB =================== */
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-=======
-=======
->>>>>>> Stashed changes
 
 .header-title {
   background-image: url("/assets/stekjes-background.jpeg");
@@ -283,7 +278,10 @@ margin-top: 300px;
 }
 
 .stekjes-info {
+  font-family: poppins, sans-serif;
   background-color: var(--main-color-beige);
+  margin-bottom: 50px;
+  padding: 1rem; 
 }
 
 .uitleg-stekjes {
@@ -291,6 +289,7 @@ margin-top: 300px;
   font-family: poppins, sans-serif;
   font-size: 18px;
   background-color: var(--main-color-brown);
+  color: var(--main-color-beige);
   padding: 3rem 1rem;
   height: auto;
   width: 90%;
@@ -310,6 +309,7 @@ margin-top: 300px;
   margin-left: 0;
   text-align: center;
   font-size: 1em;
+
 }
 
 .kopje-stekjes {
@@ -320,30 +320,57 @@ margin-top: 300px;
 }
 
 .uitleg-stekjes h2 {
-  font-family: 'Poppins-Black';
-  font-size: 24px;
-  color: var(--title-color);
+  font-family: poppins, sans-serif;
+  font-size: 26px;
+  color: var(--main-color-beige);
   margin-bottom: 1rem;
   text-align: center;
 }
 
-select {
-  appearance: none;
-  background-color: #F4CA8B;
-  border: none;
-  color: var(--title-color);
-  padding: 1rem 1rem;
-  font-family: 'Poppins-Black';
-  font-size: 1rem;
-  border-radius: 30px;
-  cursor: pointer;
-  text-align: center;
+.kopje-stekje-1 {
+  box-sizing: border-box;
+  font-family: poppins, sans-serif;
+  font-size: 18px;
+  background-color: var(--main-color-brown);
+  color: var(--main-color-beige);
+  padding: 1.5rem 1rem 3rem; /* Kleiner padding bovenaan */
+  height: auto;
+  width: 90%;
+  border-radius: 20px;
+  max-width: 100vw;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.15);
   margin: 2rem auto;
-  display: block;
-  max-width: 90vw;
+  transition: transform 0.3s ease;
 }
 
-/* .stekje flex kolom mobiel */
+.kopje-stekje-1 h2 {
+  font-size: 26px;
+}
+  
+  
+  .kopje-stekje-1:hover {
+    transform: scale(1.03);
+  }
+
+  .kopje-stekje-1:hover * {
+    transform: none;
+  }
+ 
+.harry-2 {
+  width: 200px;
+  height: 200px;
+  animation: moveHarry 2s infinite alternate;
+}
+
+@keyframes moveHarry {
+  0% {
+    transform: translateX(-100px);
+  }
+  100% {
+    transform: translateX(-30px);
+  }
+}
+
 .stekje {
   display: flex;
   flex-direction: column;
@@ -368,20 +395,6 @@ select {
   transform: scale(1.05);
 }
 
-.stekje h3 {
-  opacity: 1; /* direct zichtbaar op mobiel */
-  position: relative;
-  box-sizing: border-box;
-  padding: 20px 10px;
-  background-color: var(--title-color);
-  border-radius: 20px;
-  font-family: 'Poppins-Bold';
-  font-size: 18px;
-  color: var(--text-color-white);
-  margin: 1rem auto;
-  text-align: center;
-  transition: opaci
-}
 
 /* =================== DETAIL PAGINA  =================== */
 
@@ -545,8 +558,6 @@ select {
     font-size: 20px;
   }
 }
-
->>>>>>> Stashed changes
 /* =================== BIEB BLOK =================== */
 .bieb-blok {
   padding: clamp(1.5rem, 2vw, 3rem) 1rem;
