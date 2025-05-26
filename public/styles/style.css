@@ -320,6 +320,50 @@ nav {
   content: " -";
 }
 
+/* DETAILPAGINA DESKTOP*/
+
+@media (min-width: 768px) {
+  .stekje-info {
+    flex-direction: row;
+    padding: 60px;
+    gap: 100px;
+    border-radius: 50px;
+    max-width: 90%;
+  }
+
+  .terugknop {
+    max-height: 50px;
+  }
+
+  .stekje-description {
+    max-width: 700px;
+    padding: 20px;
+    margin: 0 auto;
+    text-align: left;
+  }
+
+  .stekje-description img {
+    max-width: 250px;
+    margin-top: 5rem;
+    border-radius: 30px;
+    box-shadow: 150px 20px 30px #F4CA8B;
+    margin-left: 0;
+
+  }
+
+  .stekje-kenmerken {
+    width: 1500px;
+  }
+
+  .stekje-details {
+    padding: 20px;
+  }
+
+  .stekje-details h3 {
+    font-size: 20px;
+  }
+}
+
 /* =================== BIEB BLOK =================== */
 .bieb-blok {
   padding: clamp(1.5rem, 2vw, 3rem) 1rem;
