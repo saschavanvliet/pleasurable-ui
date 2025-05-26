@@ -46,6 +46,16 @@ app.get('/stekjes', async function (request, response) {
     response.status(500).send('Er ging iets mis bij het ophalen van de stekjes 😢')
   }
 })
+// dynamische route detalpagina 
+app.get('/stekjes/:id', async function (request, response) {
+  const stekjeId = request.params.id;
+  const stekjeResponse = await fetch(`https://fdnd-agency.directus.app/items/bib_stekjes/${stekjeId}`);
+  const stekjeData = await stekjeResponse.json();
+ 
+ 
+  response.render('detail.liquid', { stekje: stekjeData.data });
+ });
+   
 
 // Zaden
 app.get('/zaden', async function (request, response) {

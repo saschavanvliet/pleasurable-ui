@@ -4,7 +4,7 @@ Ontwerp en maak met een team voor een opdrachtgever een interface waar gebruiker
 
 De instructie vind je in: [INSTRUCTIONS.md](https://github.com/fdnd-task/pleasurable-ui/blob/main/docs/INSTRUCTIONS.md)
 
-
+README NIET AF
 
 ## Inhoudsopgave
 
@@ -14,6 +14,22 @@ De instructie vind je in: [INSTRUCTIONS.md](https://github.com/fdnd-task/pleasur
   * [Installatie](#installatie)
   * [Bronnen](#bronnen)
   * [Licentie](#licentie)
+
+## Hoe maken we onze Readme?
+- Titel
+- Beschrijving project (user-stories? Wat was de feedback uit vorige sprint reviews?)
+- Beschrijving per pagina
+   - Ontwerpkeuzes uitleggen met ondersteuning van foto of video van het eindresultaat
+   - Figma bestand
+- Gebruik
+   - Waarom willen mensen de website gebruiken
+- Kenmerken (begrijpelijke manier uitleggen voor Mariska!! Wat betekent het voor de eindgebruiker??)
+   - Performance
+   - Toegankelijkheid
+   - Andere principes + standaarden uitleggen
+- Installatie
+   - Hoe hebben we de website gebouwd aan de hand van liquid templates, NodeJS etc
+- Bronnen
 
 ## Beschrijving
 <!-- Bij Beschrijving staat kort beschreven wat voor project het is en wat je hebt gemaakt -->
