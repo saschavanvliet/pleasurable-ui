@@ -551,7 +551,7 @@ input::placeholder {
   margin-top: 1rem;
   background-color: var(--main-color-orange);
   color: var(--main-color-brown);
-  font-weight: var(--font-weight-extra-bold);;
+  font-weight: var(--font-weight-extra-bold);
   padding: 1rem;
   border-radius: 10px;
   font-size: 1.1em;
