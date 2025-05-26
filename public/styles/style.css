@@ -484,6 +484,73 @@ body {
   }
 }
 
+/* Agenda */
+section.introtext-agenda {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  min-height: 30vh;
+  font-weight: var(--font-weight-bold);
+  padding: 2rem;
+  background-color: var(--bg-light); 
+}
+
+p.introtext-agenda {
+  background: green;
+}
+
+.workshops-agenda ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+  list-style: none;
+  margin: 0;
+}
+
+.workshops-agenda li {
+  background: var(--main-color-beige);
+  font-weight: var(--font-weight-bold);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.workshops-agenda li:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  background: var(--card-color-orange);
+}
+
+.workshops-agenda h1 {
+  font-size: 1.4rem;
+  color: var(--main-color-green);
+  margin: 0;
+}
+
+.workshops-agenda p {
+  margin: 0;
+  line-height: 1.5;
+  color: var(--text-color-brown);
+}
+
+.workshops-agenda img {
+  width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+  object-fit: cover;
+}
+
+.introtext-agenda p {
+  font-size: 1.2rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
 
   
   
