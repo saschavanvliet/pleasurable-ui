@@ -710,10 +710,11 @@ img[loading="lazy"].loaded {
 .header-404 h1 {
   font-family: 'poppins-black', sans-serif;
   color: #FAE9C3;
-  font-size: 4rem;
-  margin-top: 1rem;
+  font-size: clamp(1rem, 4vw, 4rem); 
+  margin-top: 4rem;
   text-align: center;
 }
+
 
 .section-404 {
   display: flex;
@@ -724,14 +725,36 @@ img[loading="lazy"].loaded {
   width: 80%;
   height: 600px;
   padding: 2rem;
-  border: 5px solid #4e7141;
+  border: 5px solid var(--card-color-green);
   border-radius: 50px;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 100px;
-  box-shadow: 0 0 30px 10px rgba(78, 113, 65, 0.6);
-}
 
+  a {
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    font-weight: var(--font-weight-bold);
+    background-color: var(--main-color-beige);
+    color: var(--main-color-brown);
+    padding: clamp(0.5rem, 2vw, 0.75rem) clamp(1rem, 4vw, 2rem);
+    font-size: clamp(0.9rem, 2vw, 1.2rem);
+    border: 2px solid var(--main-color-brown);
+    border-radius: 30px;
+    display: inline-block;
+    text-align: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  a:hover {
+    background-color: var(--main-color-brown);
+    color: var(--main-color-beige);
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  }
+  
+}
 
 .section-404  h2 {
   font-family: 'poppins-black', sans-serif;
@@ -748,7 +771,7 @@ img[loading="lazy"].loaded {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  animation: twerk 1s infinite;
+  animation: twerk 0.3s infinite;
 }
 
 @keyframes twerk {
@@ -757,14 +780,4 @@ img[loading="lazy"].loaded {
   50% { transform: rotate(0deg) translateY(0); }
   75% { transform: rotate(-10deg) translateY(-5px); }
   100% { transform: rotate(0deg) translateY(0); }
-}
-
-.section-404 h2 a {
-  text-decoration: none;
-  color: var(--title-color);
-}
-
-.section-404 a:hover {
-  color: var(--element-color-orange);
-
 }
