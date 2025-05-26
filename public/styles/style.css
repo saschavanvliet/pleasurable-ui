@@ -208,9 +208,9 @@ nav {
   background-color: var(--background-color);
 }
 
-.terugknop{
+.terug-stekjes {
   text-decoration: none;
-  font-family: poppins, sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-weight: var(--font-weight-bold);
   background-color: var(--main-color-beige);
   color: var(--main-color-brown);
@@ -218,9 +218,12 @@ nav {
   border: solid 2px var(--main-color-brown);
   border-radius: 30px;
   max-width: 100px;
+  display: inline-block;
+  text-align: center; 
+  height: 50px; 
 }
 
-.terugknop:hover {
+.terug-stekjes:hover {
   background-color: var(--main-color-brown);
   color: var(--main-color-beige);
   transition: background-color 0.3s ease;
