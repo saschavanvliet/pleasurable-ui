@@ -1,18 +1,100 @@
 {% render 'partials/head.liquid', title: 'Contact' %}
-
 {% render 'partials/nav.liquid' %}
 
-<h1>Alle stekjes</h1>
+<section class="header-title">
+  <h1>Stekjes</h1>
+</section>
+</header>
 
-<pre>
-  {{ stekjes | json }}
-</pre>
+<article class="intro-stekjes">
+  <p> Hou je van planten of wil je juist je groene vingers ontdekken?
+    In de Bieb in Bloei Hoek van OBA Linnaeus staat een vrolijke stekjeskast,
+    gemaakt door kinderen uit de buurt bij de OBA Maakplaats. Hier kun je
+    gratis plantjes ruilen met andere buurtbewoners. Breng een stekje van
+    thuis mee en kies een nieuw plantje uit de kast. Zo helpen we elkaar
+    én maken we de stad een stukje groener! Of je nu al een ervaren
+    plantenliefhebber bent of gewoon nieuwsgierig, iedereen kan meedoen.
+    Benieuwd hoe het werkt en wat een stekje precies is? Lees verder!
+  </p>
+</article>
 
-<ul>
-  {% for stekje in stekjes %}
-    <li>{{ stekje.naam }}</li>
-  {% endfor %}
-</ul>
+<main>
+  <section class="stekjeskast">
+    <h2>Stekjes <span>kast</span></h2>
+    <p>“Onze Stekjeskast is met liefde gemaakt door kinderen. Hieronder vind
+      je de jonge makers en de mooie stekjes die zij hebben verzorgd.”</p>
+  </section>
+
+  <section class="carousel-container">
+    {% for afbeelding in afbeeldingen %}
+    <section class="carousel">
+      <img src="https://fdnd-agency.directus.app/assets/{{ afbeelding.foto }}" alt="">
+    </section>
+    {% endfor %}
+  </section>
+
+  <section class="stekjes-info">
+  <article class="uitleg-stekjes">
+    <section class="kopje-stekjes">
+      <h2>Wat is een stekje?</h2>
+    </section>
+    <section class="harry-article">
+      <p> Een stekje is een klein stukje van een plant dat kan uitgroeien tot een nieuwe plant.
+        Dit is een makkelijke en leuke manier om planten te vermeerderen en te delen met anderen.
+        Er zijn verschillende manieren om stekjes te maken:
+        <span> - In water: Sommige planten, zoals pannenkoekplanten en monstera’s, maken wortels als je een
+          afgesneden stekje in een glas water zet. Zodra er wortels groeien, kun je het in aarde planten.</span>
+        <span> - In aarde: Andere planten kunnen direct in potgrond worden gezet. Dit werkt goed bij vetplanten
+          of kruiden zoals munt.</span>
+        <span> - Door delen: Sommige planten, zoals graslelies, groeien vanzelf kleine plantjes die je makkelijk
+          los kunt halen en opnieuw kunt planten.</span>
+        Stekjes ruilen is niet alleen een duurzame manier om je plantenverzameling uit te breiden, maar het
+        is ook een leuke manier om met andere plantenliefhebbers in contact te komen.
+      </p>
+      <img class="harry" src="/assets/stekje.gif" alt="harry">
+    </section>
+  </article>
+
+  <section class="diy-stekjes">
+    <img class="harry-2" src="/assets/harry-2.png" alt="harry">
+    <article class="kopje-stekje-1">
+      <section class="kopje-stekjes">
+        <h2>Hoe werkt het ? </h2>
+      </section>
+      <p> Het ruilen van stekjes is heel eenvoudig:
+        <p>1) Breng een stekje mee van thuis, in water of aarde.</p>
+        <p>2) Plaats het in de stekjeskast en kies een nieuw stekje uit.</p>
+        <p>3) Gebruik eventueel de potjes met aarde onder de kast om je stekje direct in te planten.</p>
+        <p>4) Neem je nieuwe stekje mee naar huis en laat het verder groeien.</p>
+        Zo zorgen we samen voor meer groen in de buurt!
+      </p>
+    </article>
+  </section>
+  </section>
+  <section class="stekje">
+    <h2> Onze Stekjes <span>Bieb!</span></h2>
+    <p>Bij Buurtcampus Oost kan je deelnemen aan de geveltuin projecten.
+      Het geveltuinproject is een geweldige manier om je steentje bij te dragen
+      aan een mooier, groener en socialer Amsterdam. Of je nu een ervaren tuinier
+      bent of nog nooit met een plant hebt gewerkt, er is altijd een plek voor je
+      in ons team.
+    </p>
+    {% for stekje in stekjes %}
+    <a href="/stekjes/{{stekje.id}}">
+      <img src="https://fdnd-agency.directus.app/assets/{{ stekje.foto }}" alt="">
+      <h3>{{stekje.naam}}</h3>
+    </a>
+    {% endfor %}
+    <button class="arrow-left" aria-label="Vorige">
+      &larr;
+    </button>
+    <button class="arrow-right" aria-label="Volgende">
+      &rarr;
+    </button>
+  </section>
+</main>
+
+{% render 'partials/foot.liquid' %}
 
 
 {% render 'partials/foot.liquid' %}
