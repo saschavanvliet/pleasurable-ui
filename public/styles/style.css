@@ -681,7 +681,7 @@ body {
   font-family: poppins;
   height: 60vh;
   padding: 2rem;
-  background-image: url('/assets/home-background.png');
+  background-image: url('../assets/home-background.avif');
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -951,8 +951,6 @@ input::placeholder {
     max-width: 800px;
   }
 }
-=======
-
 .form-section form {
   display: flex;
   flex-direction: column;
