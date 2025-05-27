@@ -36,10 +36,24 @@ app.use(express.static('public'))
 // Maak werken met data uit formulieren iets prettiger
 app.use(express.urlencoded({ extended: true }))
 
+// Algemene content meerdere pagina's
+const content = 'https://fdnd-agency.directus.app/items/bib_content'
+
 // Home
 app.get('/', async function (request, response) {
-  response.render('index.liquid')
+  try {
+    const headerhomeResponse = await fetch('https://fdnd-agency.directus.app/items/bib_content?filter[id][_eq]=1')
+    const headerhomeResponseJSON = await headerhomeResponse.json()
+
+    response.render('index.liquid', {
+      headerhome: headerhomeResponseJSON.data
+    })
+  } catch (error) {
+    console.error('Fout bij ophalen van data:', error)
+    response.status(500).send('Er is iets misgegaan.')
+  }
 })
+
 
 // Stekjes
 app.get('/stekjes', async function (request, response) {
@@ -62,7 +76,7 @@ app.get('/stekjes', async function (request, response) {
     response.status(500).send('Er ging iets mis bij het ophalen van de stekjes 😢')
   }
 })
-// dynamische route detalpagina 
+// dynamische route detailpagina stekjes
 app.get('/stekjes/:id', async function (request, response) {
   const stekjeId = request.params.id;
   const stekjeResponse = await fetch(`https://fdnd-agency.directus.app/items/bib_stekjes/${stekjeId}`);
@@ -85,8 +99,6 @@ app.get('/geveltuin', async function (request, response) {
 
 // Agenda
 app.get('/agenda', async function (request, response) {
-      // agenda
-      const content = 'https://fdnd-agency.directus.app/items/bib_content'
 
       const contentagendaResponse = await fetch(content + '?filter[id][_eq]=5')
       const contentagendaResponseJSON = await contentagendaResponse.json()

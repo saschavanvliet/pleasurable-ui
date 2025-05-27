@@ -2,10 +2,15 @@
 {% render 'partials/nav.liquid' %}
 
 <main>
+  {% for header in headerhome %}
   <header class="page-header">
+    <img class="imageheader-home"src="https://fdnd-agency.directus.app/assets/{{ header.image }}" alt="Afbeelding van de homepage" loading="lazy">
     <h1>Samen Groener Leven</h1>
     <h2>Inspireer & Deel je Groene Passie!</h2>
   </header>
+  {% endfor %}
+
+
 
 <!-- Stekjes Bieb -->
 <section class="bieb-blok stekjes-bieb">

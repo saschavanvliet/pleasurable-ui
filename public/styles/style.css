@@ -211,8 +211,7 @@ h1 {
 }}
 
 /* Footer & header */
-.page-header {
-  background: url("../assets/home-background.png") center/cover no-repeat;
+.imageheader-home {
   display: flex;
   flex-direction: column;
   align-items: center;
