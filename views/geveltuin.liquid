@@ -2,9 +2,9 @@
 {% render 'partials/nav.liquid', title: 'Geveltuin' %}
 
 <header class="header-geveltuin">
-  {% comment %} {% for afbeelding in contentgeveltuin %}
+  {% for afbeelding in contentgeveltuin %}
     <img class="header-image" src="https://fdnd-agency.directus.app/assets/{{ afbeelding.image }}" alt="achtergrondplaatje header">
-  {% endfor %} {% endcomment %}
+  {% endfor %} 
   <h1>Geveltuin</h1>
 </header>
 
@@ -25,27 +25,28 @@
         <p>Goed voor de biodiversiteit: Geveltuinen bieden nectar en stuifmeel voor insecten zoals bijen en vlinders.</p>
         <p>Gezellig: Geveltuinen zorgen voor een meer sociale en betrokken buurt.</p>
     </section>
-
-    <section class="fotos-geveltuin">
+    
+    <section class="container-geveltuincarousel">
         <h1>Maak Amsterdam <span class="highlight2">Groener</span></h1>
         <p>Verfraait de straat: Geveltuinen zorgen voor kleur en leven in de brouwerij.</p>
         <p>Goed voor het milieu: Planten in geveltuinen nemen CO2 op en zorgen voor een schonere lucht. Ze filteren ook fijnstof en regenwater.</p>
         <p>Koeler in de zomer: Planten in geveltuinen zorgen voor schaduw en verdampen water, wat voor een verkoelend effect zorgt in de stad.</p>
         <p>Goed voor de biodiversiteit: Geveltuinen bieden nectar en stuifmeel voor insecten zoals bijen en vlinders.</p>
         <p>Gezellig: Geveltuinen zorgen voor een meer sociale en betrokken buurt.</p>
+    </section>
 
     <section class="carousel-wrapper">
         <ul class="carousel">
             {% for afbeelding in afbeeldingengeveltuin %}
                 <li>
                 <picture>
-                    <img src="https://fdnd-agency.directus.app/assets/{{ afbeelding.foto }}" alt="Geveltuin afbeelding" width="400px" loading="lazy" class="fade-in-geveltuinafbeelding">
+                    <img src="https://fdnd-agency.directus.app/assets/{{ afbeelding.foto }}" alt="Geveltuin afbeelding" width="500px" loading="lazy" class="fade-in-geveltuinafbeelding">
                 </picture>
                 </li>
             {% endfor %}
-        </ul>
-    </section>  
+        </ul> 
     </section> 
+    </section>
 </main>
 
 
