@@ -1,7 +1,4 @@
 # Pleasurable User Interface
-
-Ontwerp en maak met een team voor een opdrachtgever een interface waar gebruikers blij van worden.
-
 De instructie vind je in: [INSTRUCTIONS.md](https://github.com/fdnd-task/pleasurable-ui/blob/main/docs/INSTRUCTIONS.md)
 
 README NIET AF
@@ -31,21 +28,27 @@ README NIET AF
    - Hoe hebben we de website gebouwd aan de hand van liquid templates, NodeJS etc
 - Bronnen
 
-## Beschrijving
-<!-- Bij Beschrijving staat kort beschreven wat voor project het is en wat je hebt gemaakt -->
-<!-- Voeg een mooie poster visual toe 📸 -->
-<!-- Voeg een link toe naar Github Pages 🌐-->
+### Performance (DID)  
 
-## Gebruik
-<!-- Bij Gebruik staat de user story, hoe het werkt en wat je er mee kan. -->
+**Wat is performance?**  
+Performance betekent hoe snel en soepel een website of app werkt. Dit is belangrijk omdat gebruikers niet graag wachten. Als een website langzaam laadt of traag reageert, haken mensen vaak af. Een goede performance zorgt voor een fijne gebruikerservaring en helpt je om bezoekers te behouden.
 
-## Kenmerken
-<!-- Bij Kenmerken staat welke technieken zijn gebruikt en hoe. Wat is de HTML structuur? Wat zijn de belangrijkste dingen in CSS? Wat is er met JS gedaan en hoe? Misschien heb je iets met NodeJS gedaan, of heb je een framwork of library gebruikt? -->
+**Hoe hebben wij het gedaan?**  
+In ons project hebben we de code zo gestructureerd dat alleen de benodigde onderdelen worden geladen en uitgevoerd. Dit voorkomt onnodige vertragingen en zorgt ervoor dat de site snel reageert, ook bij complexe functionaliteiten.
 
-## Installatie
-<!-- Bij Instalatie staat hoe een andere developer aan jouw repo kan werken -->
+voorbeelden toevoegen
 
-## Bronnen
+### Progressive Enhancement  
+**Wat is Progressive Enhancement?**  
+Progressive Enhancement betekent dat je website of app eerst een simpele versie laat zien die werkt op alle apparaten en browsers, ook op oudere of langzamere telefoons en computers. Daarna voeg je extra verbeteringen en functies toe die alleen te zien zijn als het apparaat dat ondersteunt. Zo krijgt iedereen een goede ervaring, ook mensen met minder nieuwe apparaten of langzamere internetverbindingen.
+
+**Waarom is dit belangrijk?**  
+Niet iedereen gebruikt hetzelfde apparaat of dezelfde browser. Sommige mensen hebben oudere telefoons of langzamere internetverbindingen, bijvoorbeeld onderweg. Als je website te ingewikkeld of zwaar is, werkt die voor hen niet goed of helemaal niet. Met Progressive Enhancement zorg je ervoor dat iedereen de website kan gebruiken, en dat mensen met betere apparaten ook extra mooie en handige functies krijgen.
+
+**Hoe hebben wij dit gedaan?**  
+We zijn begonnen met een basisversie van de website die heel simpel en stabiel werkt voor iedereen. Deze versie bevat alle belangrijke informatie en functionaliteit. Daarna hebben we extra lagen toegevoegd, zoals animaties, interactieve knoppen en verbeterde styling, die alleen laden als het apparaat en de browser dat kunnen verwerken. Zo blijft de website snel en toegankelijk, ongeacht welk apparaat je gebruikt.
+
+voorbeelden toevoegen
 
 ## Licentie
 
