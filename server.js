@@ -62,31 +62,25 @@ app.get('/', async function (request, response) {
 
 // Stekjes
 app.get('/stekjes', async function (request, response) {
-  response.render('stekjes.liquid', {
-    stekjes: stekjesResponseJSON.data,
-    afbeeldingenstekjes: afbeeldingenstekjesResponseJSON.data
-  });
-});
-
   try {
     // Haal stekjes-data op
-    const stekjesResponse = await fetch('https://fdnd-agency.directus.app/items/bib_stekjes')
-    const stekjesResponseJSON = await stekjesResponse.json()
+    const stekjesResponse = await fetch('https://fdnd-agency.directus.app/items/bib_stekjes');
+    const stekjesResponseJSON = await stekjesResponse.json();
 
     // Haal afbeeldingen-data op
-    const afbeeldingenResponse = await fetch('https://fdnd-agency.directus.app/items/bib_afbeeldingen?filter={%20%22type%22:%20{%20%22_eq%22:%20%22stekjes%22%20}}')
-    const afbeeldingenResponseJSON = await afbeeldingenResponse.json()
+    const afbeeldingenResponse = await fetch('https://fdnd-agency.directus.app/items/bib_afbeeldingen?filter={%20%22type%22:%20{%20%22_eq%22:%20%22stekjes%22%20}}');
+    const afbeeldingenResponseJSON = await afbeeldingenResponse.json();
 
     // Render de stekjespagina met data
     response.render('stekjes.liquid', {
       stekjes: stekjesResponseJSON.data,
       afbeeldingen: afbeeldingenResponseJSON.data
-    })
+    });
   } catch (error) {
-    console.error('Fout bij ophalen stekjes of afbeeldingen:', error)
-    response.status(500).send('Er ging iets mis bij het ophalen van de stekjes 😢')
+    console.error('Fout bij ophalen stekjes of afbeeldingen:', error);
+    response.status(500).send('Er ging iets mis bij het ophalen van de stekjes 😢');
   }
-})
+});
 // dynamische route detalpagina 
 app.get('/stekjes/:id', async function (request, response) {
   const stekjeId = request.params.id;
@@ -114,21 +108,22 @@ app.get('/geveltuin', async function (request, response) {
 
 // Agenda
 app.get('/agenda', async function (request, response) {
+  // agenda
+  const content = 'https://fdnd-agency.directus.app/items/bib_content';
 
-  response.render('agenda.liquid', {
+  const contentagendaResponse = await fetch(content + '?filter[id][_eq]=5');
+  const contentagendaResponseJSON = await contentagendaResponse.json();
 
-      // agenda
-      const content = 'https://fdnd-agency.directus.app/items/bib_content'
+  const workshopsResponse = await fetch('https://fdnd-agency.directus.app/items/bib_workshops');
+  const workshopsResponseJSON = await workshopsResponse.json();
 
-      const contentagendaResponse = await fetch(content + '?filter[id][_eq]=5')
-      const contentagendaResponseJSON = await contentagendaResponse.json()
-  
-      const workshopsResponse = await fetch('https://fdnd-agency.directus.app/items/bib_workshops')
-      const workshopsResponseJSON = await workshopsResponse.json()
+  // render één keer, met alles erin
   response.render('agenda.liquid', {
     contentagenda: contentagendaResponseJSON.data,
+    workshops: workshopsResponseJSON.data
   });
-})
+});
+
 
 // Prikbord (route)
 app.get('/project', async function (req, res) {
