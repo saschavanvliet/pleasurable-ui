@@ -286,60 +286,10 @@ main {
 	transform: translate(5%, -50%);
 }
 
-
 .intro-stekjes p {
   font-size: 1em;
   max-width: 65ch;
   margin: 0 auto;
-}
-
-
-.stekjeskast {
-margin-top: 300px;
-
-& span {
-  color: var(--main-color-orange);
-}
-}
-
-.stekjeskast ,h2, p {
-.terug-stekjes {
-  text-decoration: none;
-  font-family: 'Poppins', sans-serif;
-  font-weight: var(--font-weight-bold);
-  background-color: var(--main-color-beige);
-  color: var(--main-color-brown);
-  padding: 10px 20px;
-  border: solid 2px var(--main-color-brown);
-  border-radius: 30px;
-  max-width: 100px;
-  display: inline-block;
-  text-align: center; 
-  height: 50px; 
-}
-
-.terug-stekjes:hover {
-  background-color: var(--main-color-brown);
-  color: var(--main-color-beige);
-}
-}
-
-.carousel-container {
-  width: 100%;
-  height: 250px;
-  overflow-y: auto;
-  white-space: nowrap;
-}
-
-.carousel img {
-  width: 400px;
-  height: 450px;
-  object-fit: cover;
-  margin-right: 1rem;
-  display: inline-block;
-  padding: 10px;
-  border-radius: 30px;
-  transition: transform 0.3s ease;
 }
 
 .stekjes-info {
@@ -454,7 +404,6 @@ margin-top: 300px;
 }
 
 
- 
 .stekje img {
   width: 100%;
   max-width: 300px;
@@ -501,8 +450,6 @@ margin-top: 300px;
     margin: 0 auto;
   }
 
-
-
   .harry {
     width: 500px;
     height: 500px;
@@ -525,8 +472,6 @@ margin-top: 300px;
   .stekje-kenmerken {
     min-width: 300px;
     width: 1500px;
-
-
   }
 
 
@@ -570,6 +515,62 @@ margin-top: 300px;
     font-size: 3rem;
   }
 }
+/* =================== Stekjes kast=================== */
+
+.stekjeskast {
+  margin-top: 300px;
+  
+  & span {
+    color: var(--main-color-orange);
+  }
+  }
+  
+  .stekjeskast p  {
+    padding: 20px;
+    margin-bottom: 1rem;
+    max-width: 600px;
+    text-align: center;
+    justify-content: center;
+    margin: auto;
+  }
+  
+.carousel-container {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 100px;
+}
+
+.carousel-track {
+  display: flex;
+  width: max-content;
+  margin-top: 90px;
+  animation: scroll-left 40s linear infinite;
+}
+
+.carousel-item {
+  flex: 0 0 auto;
+  width: 200px;
+  height: 300px;
+  margin-right: 1rem;
+}
+
+.carousel-item img {
+  object-fit: cover;
+  display: block;
+  border-radius: 10px;
+}
+
+/* Animatie */
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
 
 /* =================== DETAILPAGINA =================== */
 .main-stekje { 
