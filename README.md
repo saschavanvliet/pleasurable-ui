@@ -1,4 +1,6 @@
-# Pleasurable User Interface
+# Bieb In Bloei 
+_versie van Nayome, Kerem en Sascha_
+
 De instructie vind je in: [INSTRUCTIONS.md](https://github.com/fdnd-task/pleasurable-ui/blob/main/docs/INSTRUCTIONS.md)
 
 README NIET AF
