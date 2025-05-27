@@ -395,31 +395,6 @@ main {
   }
 }
 
-.stekje {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  overflow-y: visible;
-  padding: 1rem;
-}
-
-
-.stekje img {
-  width: 100%;
-  max-width: 300px;
-  height: auto;
-  object-fit: cover;
-  padding: 10px;
-  border-radius: 30px;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.3);
-  margin: 0 auto;
-  transition: transform 0.3s ease;
-}
-
-.stekje img:hover {
-  transform: scale(1.05);
-}
-
 @media (min-width: 700px) {
   
   .intro-stekjes {
@@ -533,7 +508,7 @@ main {
     justify-content: center;
     margin: auto;
   }
-  
+
 .carousel-container {
   width: 100%;
   overflow: hidden;
@@ -580,6 +555,101 @@ main {
   .stekjeskast p  {
     font-size: 18px;
   }
+}
+
+/* =================== STEKJES BIEB=================== */
+
+.stekje {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  overflow-y: visible;
+  padding: 1rem;
+
+span {
+  color: var(--main-color-orange);
+}
+
+h2 {
+  color: var(--main-color-beige);
+}
+
+p {
+  color: var(--main-color-beige);
+  max-width: 600px;
+  margin: 0 auto;
+}
+}
+
+
+.stekje img {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  object-fit: cover;
+  padding: 10px;
+  border-radius: 30px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+  background-color: #d2c8a6;
+  margin: 0 auto;
+  transition: transform 0.3s ease;
+}
+
+.stekje img:hover {
+  transform: scale(1.05);
+}
+
+.stekjes-carousel-wrapper {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  padding: 2rem;
+}
+
+.stekjes-carousel {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  gap: 4rem;
+  padding: 0 2rem; 
+}
+
+.stekje-card {
+  flex: 0 0 auto;
+  width: 300px;
+  text-align: center;
+  text-decoration: none;
+  color: inherit;
+}
+
+.stekje-card h3 {
+  margin-top: 1rem;
+  font-size: 1.5rem;
+  font-weight: var(--font-weight-bold);
+  color: var(--main-color-beige);
+}
+
+.carousel-buttons {
+  text-align: center;
+  margin-top: 2em; 
+}
+
+.carousel-buttons button {
+  font-size: 2rem;
+  background: var(--main-color-beige);
+  border: none;
+  padding: 10px 30px;
+  margin: 0 1rem; 
+  border-radius: 50px;
+  cursor: pointer;
+  box-shadow: 0 0 8px rgba(0,0,0,0.1);
+  transition: transform 0.2s;
+}
+
+.carousel-buttons button:hover {
+  background: var(--card-color-green);
+  color: var(--main-color-beige);
+  transform: scale(1.1);
 }
 
 /* =================== DETAILPAGINA =================== */
