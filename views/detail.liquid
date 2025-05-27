@@ -1,0 +1,65 @@
+{% render 'partials/head.liquid' %}
+
+<main class="main-stekje">
+<section class="stekje-info">
+  <a href="/stekjes" class="terug-stekjes">terug</a>
+  <section class="stekje-description">
+    <h2>{{ stekje.naam }}</h2>
+    <p>{{ stekje.beschrijving }}</p>
+    <img src="https://fdnd-agency.directus.app/assets/{{ stekje.foto }}" alt="{{ stekje.naam }}">
+  </section>
+  <section class="stekje-kenmerken">
+
+    {% if stekje.land_van_herkomst %}
+      <details class="stekje-details">
+        <summary class="stekje-summary">LANDHERKOMST</summary>
+        <p>{{ stekje.land_van_herkomst }}</p>
+      </details>
+    {% endif %}
+  
+    {% if stekje.voeding %}
+        <details class="stekje-details">
+        <summary class="stekje-summary">VOEDING</summary>
+        <p>{{ stekje.voeding }}</p>
+      </details>
+    {% endif %}
+  
+    {% if stekje.temperatuur %}
+        <details class="stekje-details">
+        <summary class="stekje-summary">TEMPRATUUR</summary>
+        <p>{{ stekje.temperatuur }}</p>
+      </details>
+    {% endif %}
+  
+    {% if stekje.giftig %}
+        <details class="stekje-details">
+        <summary class="stekje-summary">GIFTIG</summary>
+        <p>{{ stekje.giftig }}</p>
+      </details>
+    {% endif %}
+  
+    {% if stekje.verpotten %}
+        <details class="stekje-details">
+        <summary class="stekje-summary">VERPOTTEN</summary>
+        <p>{{ stekje.verpotten }}</p>
+      </details>
+    {% endif %}
+  
+    {% if stekje.watergeven %}
+        <details class="stekje-details">
+        <summary class="stekje-summary">WATERGEVEN</summary>
+        <p>{{ stekje.watergeven }}</p>
+      </details>
+    {% endif %}
+  
+    {% if stekje.zonlicht %}
+        <details class="stekje-details">
+        <summary class="stekje-summary">ZONLICHT</summary>
+        <p>{{ stekje.zonlicht }}</p>
+      </details>
+    {% endif %}
+  </section>
+
+</section>
+</main>
+{% render 'partials/foot.liquid' %}

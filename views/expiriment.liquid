@@ -1,0 +1,88 @@
+{% render 'partials/head.liquid', title: 'Expiriment' %}
+
+<body>
+<article>
+<h2> Waarom <span>meedoen?</span> </h2>
+<p>Ben jij klaar om je straat op te fleuren, een bijdrage te leveren aan 
+    de biodiversiteit en het klimaat, én je buren te inspireren? </p>
+<p>Doe dan mee met ons project om geveltuinen aan te leggen in Amsterdam!</p>
+<p>Verfraai je straat: Geef je straat kleur en maak er een gezelligere plek van.
+Goed voor het milieu: Planten in geveltuinen nemen CO2 op en zorgen voor een schonere lucht. Ze filteren ook fijnstof en regenwater. 
+Koeler in de zomer: Planten in geveltuinen zorgen voor schaduw en verdampen water, wat voor een verkoelend effect zorgt in de stad. 
+Goed voor de biodiversiteit: Geveltuinen bieden nectar en stuifmeel voor insecten zoals bijen en vlinders. 
+Gezellig: Geveltuinen zorgen voor een meer sociale en betrokken buurt.</p>
+</article>
+
+<a  href="/contact" class="harry-button">Meld je aan
+<img src="/assets/harrybutton.png" alt="" class="harry-jump">
+</a>
+
+</body>
+</html>
+
+<style>
+body {
+        display: flex;
+        flex-direction: column;
+    }
+span {
+    color: #ff8d06;
+}
+article { 
+    justify-content: center;
+    text-align: center;
+    margin: 0 auto;
+    padding: 20px;
+    max-width: 1200px;
+}
+
+.harry-button {
+    position: relative;
+    padding: 10px 20px;
+    font-family: poppins;
+    font-weight: var(--font-weight-bold);
+    font-size: 16px;
+    width: 300px;
+    color: #fff;
+    background-color: #ff8d06;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+    display: block;
+    margin: 20px auto; 
+    margin-top: 100px;
+}
+
+.harry-jump {
+    position: absolute;
+    height: 75px;
+    width: 70px;
+    transform: translate(300%, -85%);
+    z-index: -1;
+    transition: transform 1s ease;
+}
+@keyframes harryJumpAnimation {
+    0% {
+        transform: translate(300%, -85%) rotate(0deg);
+    }
+    25% {
+        transform: translate(300%, -200%) rotate(0deg);
+    }
+    75% {
+        transform: translate(300%, -200%) rotate(360deg);
+    }
+    100% {
+        transform: translate(300%, -85%) rotate(0deg);
+    }
+}
+
+.harry-button:hover .harry-jump {
+    animation: harryJumpAnimation 1s ease-in-out;
+}
+.harry-button:hover {
+    background-color: var(--main-color-green);
+}
+
+</style>

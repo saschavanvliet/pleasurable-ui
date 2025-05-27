@@ -1,5 +1,40 @@
 {% render 'partials/head.liquid', title: 'Agenda' %}
+{% render 'partials/nav.liquid', title: 'Agenda' %}
 
+<main>
+  <section class="h1-agenda">
+    <h1>Agenda</h1>
+  </section>
 
+  <section class="introtext-agenda">
+    {% for tekstje in contentagenda %}
+      <p>"{{ tekstje.text }}"</p>
+    {% endfor %}
+  </section>
+
+  <h2 class="h2-agenda">Workshops</h2>
+
+  <section class="introworkshops-agenda">
+    {% for workshop in workshops %}
+      {% if workshop.id == 1 %}
+        <p>{{ workshop.omschrijving }}</p>
+      {% endif %}
+    {% endfor %}
+  </section>
+
+  <section class="workshops-agenda">
+    <ul>
+      {% for workshop in workshops %}
+        <li>
+          <h1>{{ workshop.naam }}</h1>
+          <img src="https://fdnd-agency.directus.app/assets/{{ workshop.foto }}" alt="Geveltuin afbeelding" width="400px">
+          <p>{{ workshop.kosten }}</p>
+          <p>{{ workshop.locatie }}</p>
+          <p>{{ workshop.datum }}</p>
+        </li>
+      {% endfor %}
+    </ul>
+  </section>
+</main>
 
 {% render 'partials/foot.liquid' %}
