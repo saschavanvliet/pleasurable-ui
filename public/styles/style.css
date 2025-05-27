@@ -997,7 +997,12 @@ body {
   margin-top: 3rem;
 }
 
-.project-cards ul {
+
+/* =================== Hero =================== */
+.page-header {
+  background: url("../assets/home-background.png") center/cover no-repeat;
+
+ .project-cards ul {
   display: flex;
   flex-direction: column;
   gap: 2rem;
@@ -1037,6 +1042,20 @@ body {
   color: var(--main-color-beige);
 }
 
+
+.footer-section address p,
+.footer-section address a {
+  font-size: 1rem;
+  margin: 0.2rem 0;
+  color: #e9dcbe;
+  text-decoration: none;
+  display: block;
+/* =================== STEKJES BIEB =================== */
+/* =================== BIEB BLOK =================== */
+.bieb-blok {
+  padding: clamp(1.5rem, 2vw, 3rem) 1rem;
+}}
+  
 .project-cards p {
   font-size: 0.95em;
   color: var(--main-color-beige);
@@ -1172,6 +1191,17 @@ input::placeholder {
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
   }
 }
+
+
+.geveltuin {
+  box-sizing: border-box;
+  border: 1px solid var(--main-color-green);
+  border-radius: var(--radius);
+  padding: 15rem;
+  margin: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background-color: var(--main-color-beige);
+
   
   /* FADE IN ANIMATIE */
   @keyframes fadeIn {
@@ -1185,7 +1215,6 @@ input::placeholder {
 	}
   }
   
-
 /* ========== RESPONSIVE ========== */
 @media (min-width: 700px) {
  
@@ -1289,6 +1318,147 @@ input::placeholder {
   }
 }
 
+
+/* Geveltuin */
+
+.header-geveltuin {
+  position: relative;
+  height: 70vh;
+  overflow: hidden;
+}
+
+.header-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+
+.header-geveltuin h1 {
+  position: relative;
+  z-index: 1000;
+  color: white;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 2rem;
+}
+
+.main-geveltuin p {
+  margin-left: 2em;
+  margin-right: 2em;
+}
+
+.introtext-geveltuin {
+  background: var(--main-color-beige);
+  padding: 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  color: var(--card-color-green);
+  text-align: center;
+  transform: translateY(-15rem);
+
+  max-width: 90%;
+  margin: 0 auto;
+  position: relative;
+  top: 5rem; 
+  z-index: 2;
+}
+
+@media (min-width: 740px) {
+  .introtext-geveltuin {
+    max-width: 80%;
+    padding: 5em;
+  }
+}
+
+.geveltuin-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  align-items: flex-start;
+  margin-block: 2rem;
+}
+
+.meedoen-geveltuin {
+  background: var(--main-color-brown);
+  color: var(--text-color-beige);
+  padding-bottom: 7em;
+  flex: 2;
+  width: 100%;
+}
+
+.highlight {
+  color: var(--main-color-orange);
+}
+
+.highlight2 {
+  color: var(--main-color-green); 
+}
+
+.container-geveltuincarousel h1 {
+  color: var(--text-color-brown);
+  padding-top: 1em;
+}
+.container-geveltuincarousel {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  align-items: flex-start;
+  margin-block: 4rem;
+}
+
+.geveltuin-tekst {
+  flex: 1 1 300px;
+  max-width: 600px;
+}
+
+.geveltuin-carousel {
+  flex: 1 1 400px;
+  overflow: hidden;
+}
+
+.carousel {
+  display: flex;
+  gap: 1rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding-bottom: 1rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  max-width: 50%;
+}
+
+.carousel li {
+  flex: 0 0 auto;
+  scroll-snap-align: start;
+}
+
+.carousel img {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 1rem;
+  object-fit: cover;
+  height: auto;
+}
+
+/* img.fade-in-geveltuinafbeelding {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+img.fade-in-geveltuinafbeelding.show {
+  opacity: 1;
+  transform: translateY(0);
+} */
+
 /* Agenda */
 section.introtext-agenda {
   display: flex;
@@ -1366,7 +1536,7 @@ h2.h2-agenda {
 }
 
   
-/* =================== FOOTER =================== */
+/* ================= FOOTER =================== */
 .footer {
   background-color: var(--card-color-green);
   padding: 2rem;

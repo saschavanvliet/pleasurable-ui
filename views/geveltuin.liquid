@@ -1,5 +1,53 @@
 {% render 'partials/head.liquid', title: 'Geveltuin' %}
+{% render 'partials/nav.liquid', title: 'Geveltuin' %}
 
+<header class="header-geveltuin">
+  {% for afbeelding in contentgeveltuin %}
+    <img class="header-image" src="https://fdnd-agency.directus.app/assets/{{ afbeelding.image }}" alt="achtergrondplaatje header">
+  {% endfor %} 
+  <h1>Geveltuin</h1>
+</header>
+
+<main class="main-geveltuin">
+    <section class="meedoen-geveltuin">
+        <div class="introtext-geveltuin">
+            {% for tekstje in contentgeveltuin %}
+                <p>{{ tekstje.text }}</p>
+            {% endfor %}
+        </div>
+
+        <h1>Waarom <span class="highlight">meedoen?</span></h1>
+
+        <p>Ben jij klaar om je straat op te fleuren, een bijdrage te leveren aan de biodiversiteit en het klimaat, én je buren te inspireren? Doe dan mee met ons project om geveltuinen aan te leggen in Amsterdam!</p>
+        <p>Verfraai je straat: Geef je straat kleur en maak er een gezelligere plek van.</p>
+        <p>Goed voor het milieu: Planten in geveltuinen nemen CO2 op en zorgen voor een schonere lucht. Ze filteren ook fijnstof en regenwater.</p>
+        <p>Koeler in de zomer: Planten in geveltuinen zorgen voor schaduw en verdampen water, wat voor een verkoelend effect zorgt in de stad.</p>
+        <p>Goed voor de biodiversiteit: Geveltuinen bieden nectar en stuifmeel voor insecten zoals bijen en vlinders.</p>
+        <p>Gezellig: Geveltuinen zorgen voor een meer sociale en betrokken buurt.</p>
+    </section>
+    
+    <section class="container-geveltuincarousel">
+        <h1>Maak Amsterdam <span class="highlight2">Groener</span></h1>
+        <p>Verfraait de straat: Geveltuinen zorgen voor kleur en leven in de brouwerij.</p>
+        <p>Goed voor het milieu: Planten in geveltuinen nemen CO2 op en zorgen voor een schonere lucht. Ze filteren ook fijnstof en regenwater.</p>
+        <p>Koeler in de zomer: Planten in geveltuinen zorgen voor schaduw en verdampen water, wat voor een verkoelend effect zorgt in de stad.</p>
+        <p>Goed voor de biodiversiteit: Geveltuinen bieden nectar en stuifmeel voor insecten zoals bijen en vlinders.</p>
+        <p>Gezellig: Geveltuinen zorgen voor een meer sociale en betrokken buurt.</p>
+    </section>
+
+    <section class="carousel-wrapper">
+        <ul class="carousel">
+            {% for afbeelding in afbeeldingengeveltuin %}
+                <li>
+                <picture>
+                    <img src="https://fdnd-agency.directus.app/assets/{{ afbeelding.foto }}" alt="Geveltuin afbeelding" width="500px" loading="lazy" class="fade-in-geveltuinafbeelding">
+                </picture>
+                </li>
+            {% endfor %}
+        </ul> 
+    </section> 
+    </section>
+</main>
 
 
 {% render 'partials/foot.liquid' %}
