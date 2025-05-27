@@ -24,14 +24,22 @@
     <p>“Onze Stekjeskast is met liefde gemaakt door kinderen. Hieronder vind
       je de jonge makers en de mooie stekjes die zij hebben verzorgd.”</p>
   </section>
-
   <section class="carousel-container">
-    {% for afbeelding in afbeeldingen %}
-    <section class="carousel">
-      <img src="https://fdnd-agency.directus.app/assets/{{ afbeelding.foto }}" alt="">
-    </section>
-    {% endfor %}
+    <div class="carousel-track">
+      {% for afbeelding in afbeeldingen %}
+      <div class="carousel-item">
+        <img src="https://fdnd-agency.directus.app/assets/{{ afbeelding.foto }}" alt="">
+      </div>
+      {% endfor %}
+      <!--Dubbele loop voor eindeloze scroll -->
+      {% for afbeelding in afbeeldingen %}
+      <div class="carousel-item">
+        <img src="https://fdnd-agency.directus.app/assets/{{ afbeelding.foto }}" alt="">
+      </div>
+      {% endfor %}
+    </div>
   </section>
+  
 
   <section class="stekjes-info">
   <article class="uitleg-stekjes">
