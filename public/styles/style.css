@@ -652,6 +652,26 @@ p {
   transform: scale(1.1);
 }
 
+@media (min-width: 1200px) {
+
+
+  .stekjes-carousel-wrapper {
+    padding: 5rem;
+  }
+
+  .stekjes-carousel {
+    gap: 1rem;
+  }
+
+  .stekje-card {
+    width: 400px;
+  }
+
+  .stekje-card img {
+    width: 300px;
+    height: 400px;
+  }
+}
 /* =================== DETAILPAGINA =================== */
 .main-stekje { 
   font-family: var(--font-family-text);
