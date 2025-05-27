@@ -300,6 +300,8 @@ margin-top: 300px;
 & span {
   color: var(--main-color-orange);
 }
+}
+
 .stekjeskast ,h2, p {
 .terug-stekjes {
   text-decoration: none;
@@ -361,6 +363,7 @@ margin-top: 300px;
   max-width: 100vw;
   box-shadow: 0 4px 20px rgba(0,0,0,0.15);
   margin: 2rem auto;
+}
 
 .stekje-description img {
   width: 40%;
@@ -475,6 +478,8 @@ margin-top: 300px;
 .stekje-details[open] .stekje-summary::after {
   content: "-";
 }
+  }
+}
 
 @media (min-width: 1200px) {
   .stekje-info {
@@ -532,7 +537,7 @@ margin-top: 300px;
   .kopje-stekje-1 h2{
     font-size: 2.5rem;
   }
-
+  }
 }
 @media (min-width: 1000px) {
   .intro-stekjes {
