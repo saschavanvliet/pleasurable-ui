@@ -10,7 +10,7 @@ const observer = new IntersectionObserver((entries) => {
   document.querySelectorAll('.fade-in-geveltuinafbeelding').forEach(img => {
     observer.observe(img);
   });
-=======
+
 document.addEventListener("DOMContentLoaded", () => {
     const lazyImages = document.querySelectorAll('img[loading="lazy"]');
   

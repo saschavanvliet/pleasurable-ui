@@ -1001,7 +1001,7 @@ body {
 /* =================== Hero =================== */
 .page-header {
   background: url("../assets/home-background.png") center/cover no-repeat;
-
+}
  .project-cards ul {
   display: flex;
   flex-direction: column;
@@ -1201,7 +1201,7 @@ input::placeholder {
   margin: 1rem;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   background-color: var(--main-color-beige);
-
+}
   
   /* FADE IN ANIMATIE */
   @keyframes fadeIn {
