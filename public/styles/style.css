@@ -28,7 +28,7 @@ h1, h2 {
   font-weight: var(--font-weight-black);
 }
 
-/* ========== STANDAARD NAV STYLING ========== */
+/* ========= STANDAARD NAV STYLING ========== */
 
 * {
   margin: 0;
@@ -244,6 +244,10 @@ h1 {
 }
 
 /* =================== STEKJES BIEB =================== */
+/* =================== BIEB BLOK =================== */
+.bieb-blok {
+  padding: clamp(1.5rem, 2vw, 3rem) 1rem;
+}
 
 .header-title {
   background-image: url("/assets/stekjes-background.jpeg");
@@ -297,7 +301,6 @@ margin-top: 300px;
   color: var(--main-color-orange);
 }
 .stekjeskast ,h2, p {
-=======
 .terug-stekjes {
   text-decoration: none;
   font-family: 'Poppins', sans-serif;
@@ -640,8 +643,6 @@ margin-top: 300px;
   }
 }
 
-
-
 /* =================== BUURTCAMPUS =================== */
 .buurtcampus {
   background-color: var(--main-color-brown);
@@ -683,11 +684,7 @@ margin-top: 300px;
   margin: 0 auto 1rem auto;
 }
 
-
-
 /* =================== Contact =================== */
-
-
 .aanmeld-container {
   display: flex;
   flex-direction: column;
@@ -1116,6 +1113,83 @@ input::placeholder {
     font-size: 1.5rem;
   }
 }
+
+/* Agenda */
+section.introtext-agenda {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  min-height: 50vh;
+  font-weight: var(--font-weight-bold);
+  padding: 2rem;
+  background: var(--main-color-beige);
+  color: var(--main-color-green);
+}
+
+.introworkshops-agenda p{
+  margin-left: 4em;
+  margin-right: 4em;
+  margin-top: 0.5em;
+}
+
+h2.h2-agenda {
+  margin-top: 1em;
+}
+
+.workshops-agenda ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+  list-style: none;
+  margin: 0;
+}
+
+.workshops-agenda li {
+  background: var(--main-color-beige);
+  font-weight: var(--font-weight-bold);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin-top: 1em;
+}
+
+.workshops-agenda li:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  background: var(--card-color-orange);
+}
+
+.workshops-agenda h1 {
+  font-size: 1.4rem;
+  color: var(--main-color-green);
+  margin: 0;
+}
+
+.workshops-agenda p {
+  margin: 0;
+  line-height: 1.5;
+  color: var(--text-color-brown);
+}
+
+.workshops-agenda img {
+  width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+  object-fit: cover;
+}
+
+.introtext-agenda p {
+  font-size: 1.2rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
   
 /* =================== FOOTER =================== */
 .footer {

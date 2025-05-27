@@ -85,7 +85,18 @@ app.get('/geveltuin', async function (request, response) {
 
 // Agenda
 app.get('/agenda', async function (request, response) {
-  response.render('agenda.liquid')
+      // agenda
+      const content = 'https://fdnd-agency.directus.app/items/bib_content'
+
+      const contentagendaResponse = await fetch(content + '?filter[id][_eq]=5')
+      const contentagendaResponseJSON = await contentagendaResponse.json()
+  
+      const workshopsResponse = await fetch('https://fdnd-agency.directus.app/items/bib_workshops')
+      const workshopsResponseJSON = await workshopsResponse.json()
+  response.render('agenda.liquid', {
+    contentagenda: contentagendaResponseJSON.data,
+    workshops: workshopsResponseJSON.data
+  });
 })
 
 // Prikbord (route)
