@@ -87,18 +87,22 @@
       bent of nog nooit met een plant hebt gewerkt, er is altijd een plek voor je
       in ons team.
     </p>
-    {% for stekje in stekjes %}
-    <a href="/stekjes/{{stekje.id}}">
-      <img src="https://fdnd-agency.directus.app/assets/{{ stekje.foto }}" alt="">
-      <h3>{{stekje.naam}}</h3>
-    </a>
-    {% endfor %}
-    <button class="arrow-left" aria-label="Vorige">
-      &larr;
-    </button>
-    <button class="arrow-right" aria-label="Volgende">
-      &rarr;
-    </button>
+    <section class="stekjes-carousel-wrapper">
+      <div class="stekjes-carousel" id="stekjesCarousel">
+        {% for stekje in stekjes %}
+        <a href="/stekjes/{{stekje.id}}" class="stekje-card">
+          <img src="https://fdnd-agency.directus.app/assets/{{ stekje.foto }}" alt="">
+          <h3>{{stekje.naam}}</h3>
+        </a>
+        {% endfor %}
+      </div>
+  
+      <div class="carousel-buttons">
+        <button onclick="scrollCarousel(-1)">‹</button>
+        <button onclick="scrollCarousel(1)">›</button>
+      </div>
+      
+    </section>
   </section>
 </main>
 
