@@ -287,60 +287,10 @@ h1 {
 	transform: translate(5%, -50%);
 }
 
-
 .intro-stekjes p {
   font-size: 1em;
   max-width: 65ch;
   margin: 0 auto;
-}
-
-
-.stekjeskast {
-margin-top: 300px;
-
-& span {
-  color: var(--main-color-orange);
-}
-}
-
-.stekjeskast ,h2, p {
-.terug-stekjes {
-  text-decoration: none;
-  font-family: 'Poppins', sans-serif;
-  font-weight: var(--font-weight-bold);
-  background-color: var(--main-color-beige);
-  color: var(--main-color-brown);
-  padding: 10px 20px;
-  border: solid 2px var(--main-color-brown);
-  border-radius: 30px;
-  max-width: 100px;
-  display: inline-block;
-  text-align: center; 
-  height: 50px; 
-}
-
-.terug-stekjes:hover {
-  background-color: var(--main-color-brown);
-  color: var(--main-color-beige);
-}
-}
-
-.carousel-container {
-  width: 100%;
-  height: 250px;
-  overflow-y: auto;
-  white-space: nowrap;
-}
-
-.carousel img {
-  width: 400px;
-  height: 450px;
-  object-fit: cover;
-  margin-right: 1rem;
-  display: inline-block;
-  padding: 10px;
-  border-radius: 30px;
-  transition: transform 0.3s ease;
 }
 
 .stekjes-info {
@@ -446,6 +396,7 @@ margin-top: 300px;
   }
 }
 
+
 .stekje {
   display: flex;
   flex-direction: column;
@@ -469,6 +420,8 @@ margin-top: 300px;
 .stekje img:hover {
   transform: scale(1.05);
 }
+
+
 
 @media (min-width: 700px) {
   
@@ -499,8 +452,6 @@ margin-top: 300px;
     text-align: center;
     margin: 0 auto;
   }
-
-
 
   .harry {
     width: 500px;
@@ -566,7 +517,188 @@ margin-top: 300px;
     font-size: 3rem;
   }
 }
+/* =================== Stekjes kast=================== */
 
+.stekjeskast {
+  margin-top: 300px;
+  
+  & span {
+    color: var(--main-color-orange);
+  }
+  }
+  
+  .stekjeskast p  {
+    padding: 20px;
+    margin-bottom: 1rem;
+    max-width: 600px;
+    text-align: center;
+    justify-content: center;
+    margin: auto;
+  }
+
+.carousel-container {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 100px;
+}
+
+.carousel-track {
+  display: flex;
+  width: max-content;
+  margin-top: 90px;
+  animation: scroll-left 40s linear infinite;
+}
+
+.carousel-item {
+  flex: 0 0 auto;
+  width: 200px;
+  height: 300px;
+  margin-right: 1rem;
+}
+
+.carousel-item img {
+  object-fit: cover;
+  display: block;
+  border-radius: 10px;
+}
+
+/* Animatie */
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@media (min-width: 1200px) {
+  .carousel-item {
+      width: 300px;
+      height: 400px;
+  }
+
+  .stekjeskast p  {
+    font-size: 18px;
+  }
+}
+
+/* =================== STEKJES BIEB=================== */
+
+.stekje {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  overflow-y: visible;
+  padding: 1rem;
+
+span {
+  color: var(--main-color-orange);
+}
+
+h2 {
+  color: var(--main-color-beige);
+}
+
+p {
+  color: var(--main-color-beige);
+  max-width: 600px;
+  margin: 0 auto;
+}
+}
+
+
+.stekje img {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  object-fit: cover;
+  padding: 10px;
+  border-radius: 30px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+  background-color: #d2c8a6;
+  margin: 0 auto;
+  transition: transform 0.3s ease;
+}
+
+.stekje img:hover {
+  transform: scale(1.05);
+}
+
+.stekjes-carousel-wrapper {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  padding: 2rem;
+}
+
+.stekjes-carousel {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  gap: 4rem;
+  padding: 0 2rem; 
+}
+
+.stekje-card {
+  flex: 0 0 auto;
+  width: 300px;
+  text-align: center;
+  text-decoration: none;
+  color: inherit;
+}
+
+.stekje-card h3 {
+  margin-top: 1rem;
+  font-size: 1.5rem;
+  font-weight: var(--font-weight-bold);
+  color: var(--main-color-beige);
+}
+
+.carousel-buttons {
+  text-align: center;
+  margin-top: 2em; 
+}
+
+.carousel-buttons button {
+  font-size: 2rem;
+  background: var(--main-color-beige);
+  border: none;
+  padding: 10px 30px;
+  margin: 0 1rem; 
+  border-radius: 50px;
+  cursor: pointer;
+  box-shadow: 0 0 8px rgba(0,0,0,0.1);
+  transition: transform 0.2s;
+}
+
+.carousel-buttons button:hover {
+  background: var(--card-color-green);
+  color: var(--main-color-beige);
+  transform: scale(1.1);
+}
+
+@media (min-width: 1200px) {
+
+
+  .stekjes-carousel-wrapper {
+    padding: 5rem;
+  }
+
+  .stekjes-carousel {
+    gap: 1rem;
+  }
+
+  .stekje-card {
+    width: 400px;
+  }
+
+  .stekje-card img {
+    width: 300px;
+    height: 400px;
+  }
+}
 /* =================== DETAILPAGINA =================== */
 .main-stekje { 
   font-family: var(--font-family-text);
@@ -1005,6 +1137,7 @@ body {
   padding: 0;
   list-style: none;
   margin: 0 auto;
+  margin-top: 3rem;
 }
 .project-cards {
   display: flex;
