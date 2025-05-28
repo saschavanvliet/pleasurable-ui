@@ -66,6 +66,16 @@ h1 {
   font-family: var(--font-primary);
 }
 
+/* =================== Hero section =================== */
+.stekjes-hero {
+  background-image: url('/assets/stekjes-background.jpeg') !important;  
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+
+
 /* =================== NAVIGATION =================== */
 .logo-container {
   display: flex;
