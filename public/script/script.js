@@ -28,3 +28,11 @@ document.addEventListener("DOMContentLoaded", () => {
     console.log(`Aantal lazy images gevonden: ${lazyImages.length}`);
   });
   
+  function scrollCarousel(direction) {
+    const container = document.getElementById('stekjesCarousel');
+    const scrollAmount = 220;
+    container.scrollBy({
+      left: direction * scrollAmount,
+      behavior: 'smooth'
+    });
+  }
