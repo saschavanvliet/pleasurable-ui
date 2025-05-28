@@ -1519,16 +1519,36 @@ input::placeholder {
   margin-block: 2rem;
 }
 
-.meedoen-geveltuin {
-  background: var(--main-color-brown);
-  color: var(--text-color-beige);
-  padding-bottom: 7em;
-  flex: 2;
-  width: 100%;
+.geveltuin-article { 
+  justify-content: center;
+  text-align: center;
+  margin: 0 auto;
+  padding: 20px;
+  max-width: 1200px;
 }
 
-.highlight {
-  color: var(--main-color-orange);
+
+span {
+  color: #ff8d06;
+}
+
+
+.harry-button {
+    position: relative;
+    padding: 10px 20px;
+    font-family: poppins;
+    font-weight: var(--font-weight-bold);
+    font-size: 16px;
+    width: 300px;
+    color: #fff;
+    background-color: #ff8d06;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+    display: block;
+    margin: 20px auto; 
 }
 
 .highlight2 {
