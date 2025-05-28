@@ -117,10 +117,14 @@ app.get('/agenda', async function (request, response) {
   const workshopsResponse = await fetch('https://fdnd-agency.directus.app/items/bib_workshops');
   const workshopsResponseJSON = await workshopsResponse.json();
 
+  const headeragendaResponse = await fetch(content + '?filter[id][_eq]=5')
+  const headeragendaResponseJSON = await headeragendaResponse.json()
+
   // render één keer, met alles erin
   response.render('agenda.liquid', {
     contentagenda: contentagendaResponseJSON.data,
-    workshops: workshopsResponseJSON.data
+    workshops: workshopsResponseJSON.data,
+    headeragenda: headeragendaResponseJSON.data
   });
 });
 

@@ -2,9 +2,15 @@
 {% render 'partials/nav.liquid', title: 'Agenda' %}
 
 <main>
-  <section class="h1-agenda">
-    <h1>Agenda</h1>
-  </section>
+  {% for header in headeragenda %}
+    <header class="header-agenda">
+      <img class="imgheader-agenda" src="https://fdnd-agency.directus.app/assets/{{ header.image }}" alt="Header agenda">
+      <section class="h1-agenda">
+        <h1>Agenda</h1>
+      </section>
+    </header>
+  {% endfor %}
+</main>
 
   <section class="introtext-agenda">
     {% for tekstje in contentagenda %}
