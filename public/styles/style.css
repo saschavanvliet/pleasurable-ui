@@ -1188,7 +1188,6 @@ input::placeholder {
   }
 }
 
-
 .geveltuin {
   box-sizing: border-box;
   border: 1px solid var(--main-color-green);
@@ -1342,7 +1341,15 @@ input::placeholder {
   justify-content: center;
   text-align: center;
   padding: 2rem;
-}
+@media (min-width: 768px) {
+  font-size: 4rem;
+}}
+
+@media (min-width: 768px) {
+.main-geveltuin h1 {
+  font-size: 4rem;
+}}
+
 
 .main-geveltuin p {
   margin-left: 2em;
@@ -1357,7 +1364,6 @@ input::placeholder {
   color: var(--card-color-green);
   text-align: center;
   transform: translateY(-15rem);
-
   max-width: 90%;
   margin: 0 auto;
   position: relative;
