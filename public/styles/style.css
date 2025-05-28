@@ -196,6 +196,7 @@ h1 {
   padding: 2rem;
   opacity: 90%;
   border-radius: 0 30px;
+  z-index: 1000;
 }
 
   .nav-links details ul {
@@ -215,6 +216,7 @@ h1 {
   position: relative;
   height: 70vh;
   overflow: hidden;
+  z-index: 0;
 }
 
 .imageheader-home {
@@ -227,22 +229,10 @@ h1 {
   z-index: 0;
 }
 
-.imageheader-home h1 {
-  position: relative;
-  z-index: 1000;
-  color: white;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 2rem;
-}
-
-
 .page-header h1,
 .page-header h2 {
   color: white;
+  z-index: 1000;
 }
 
 .page-header h1 {
