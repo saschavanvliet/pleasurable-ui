@@ -75,7 +75,7 @@ Op basis van het ontwerp dat je hebt gedeeld (de verschillende pagina’s van je
 
 ---
 
-### 🎨 Ontwerpkeuzes in de Readme
+### 🎨 Ontwerpkeuzes
 
 In mijn ontwerp heb ik bewust gekozen voor een natuurlijke, warme en toegankelijke uitstraling. Dit sluit goed aan bij het onderwerp van de site: **groen leven in de buurt**. Hieronder licht ik mijn keuzes toe per onderdeel:
 
