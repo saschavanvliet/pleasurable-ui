@@ -71,4 +71,43 @@ Bij het ontwerpen en bouwen van deze pagina heb ik rekening gehouden met de **Hi
 4. **Pleasurable (Aangenaam)**
    De hover-effecten op buttons en links geven de interface een levendige uitstraling en zorgen voor visuele feedback. Dit maakt het interactief en aantrekkelijk om de pagina te gebruiken.
 
+Op basis van het ontwerp dat je hebt gedeeld (de verschillende pagina’s van je website), kun je in je README je ontwerpkeuzes zo presenteren:
 
+---
+
+### 🎨 Ontwerpkeuzes in de Readme
+
+In mijn ontwerp heb ik bewust gekozen voor een natuurlijke, warme en toegankelijke uitstraling. Dit sluit goed aan bij het onderwerp van de site: **groen leven in de buurt**. Hieronder licht ik mijn keuzes toe per onderdeel:
+
+#### 🌿 **Kleurenpalet**
+
+Ik heb gewerkt met aardetinten zoals **groen**, **beige**, **donkerbruin** en **oranje**. Deze kleuren roepen een gevoel op van natuur, aarde en groei. Ze passen goed bij de thema’s planten, stekjes, geveltuinen en zaden.
+
+#### 📐 **Typografie**
+
+De gebruikte font is **Poppins**, een modern maar vriendelijk ogend font dat goed leesbaar is op zowel desktop als mobiel. De koppen zijn vetgedrukt om hiërarchie duidelijk te maken, terwijl de paragrafen luchtig en toegankelijk ogen.
+
+#### 🧭 **Structuur & Navigatie**
+
+De navigatie is duidelijk en consistent bovenaan de pagina geplaatst. Op mobiel is dit verwerkt in een hamburger menu. Alle onderdelen zijn logisch opgebouwd, van **Home** tot **Contact**. Ik heb ook een **404-pagina** toegevoegd met een visuele knipoog (de mascotte Harry), op basis van feedback van de opdrachtgever.
+
+#### 📸 **Beeldgebruik**
+
+Ik gebruik grote visuals om sfeer neer te zetten, bijvoorbeeld op de **Homepagina** en de **Agenda**. Daarnaast worden op de **Stekjespagina** en **Detailpagina** foto's gecombineerd met tekst om content aantrekkelijk te maken.
+
+#### 📱 **Responsiveness**
+
+Het ontwerp is **mobile-first** opgezet. Ik heb aandacht besteed aan voldoende witruimte, duidelijke klikbare elementen en het behoud van leesbaarheid op kleinere schermen.
+
+#### 🤝 **Interactie**
+
+Er is een contactformulier op de **Contactpagina**, en op de **Stekjes detailpagina** kun je een reactie achterlaten. Ook is er een digitale **prikbordpagina** waar gebruikers input kunnen geven. Dit alles verhoogt de betrokkenheid van gebruikers.
+
+#### 💡 **Feedbackverwerking**
+
+Tijdens Sprint 10 kreeg ik de feedback om de 404-pagina visueel aantrekkelijker te maken. Daarom heb ik de mascotte **Harry** toegevoegd en de pagina vriendelijk vormgegeven. In mijn Readme geef ik aan hoe ik deze feedback heb opgepakt.
+
+
+<img width="650" alt="Image" src="https://github.com/user-attachments/assets/6c217536-ad3b-4590-98db-b7abb7ef8351"/>
+
+<img width="650" alt="Image" src="https://github.com/user-attachments/assets/4518aaa3-b95c-49ef-8ffe-414108bdab0f"/>
